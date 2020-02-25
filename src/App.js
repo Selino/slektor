@@ -9,7 +9,7 @@ function App() {
       <header className='App-header'>
         <Nav />
       </header>
-      <div className='body'>
+      <div>
         <DetailContainer />
       </div>
     </div>

@@ -9,7 +9,7 @@ export default function DetailContainer() {
     <Container>
       <Row>
         <Col>
-          <BookInfo />
+          <BookInfo challengeTotal={25.34} />
         </Col>
       </Row>
       <Row>
@@ -19,8 +19,8 @@ export default function DetailContainer() {
       </Row>
       <Row>
         <Col xs={8}>
-          <ChallengeCards />
-          <ChallengeCards />
+          <ChallengeCards amount={5} />
+          <ChallengeCards amount={10} />
         </Col>
         <Col>
           <StaticText />

@@ -2,11 +2,11 @@ import React from "react"
 import { Card, Button } from "react-bootstrap"
 import LoremIpsum from "react-lorem-ipsum"
 
-export default function ChallengeCards() {
+export default function ChallengeCards(props) {
   return (
     <Card style={{ marginBottom: "2rem" }}>
       <Card.Body>
-        <Card.Title>Bid $5</Card.Title>
+        <Card.Title>Bid ${props.amount}</Card.Title>
         <Card.Text>
           <LoremIpsum />
         </Card.Text>
