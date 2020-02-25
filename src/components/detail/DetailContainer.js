@@ -1,15 +1,18 @@
 import React from "react"
 import "../../Detail.css"
+import { Container, Row, Col } from "react-bootstrap"
 
 export default function DetailContainer() {
   return (
     <Container>
       <Row>
-        <Col className='scaffold detail-area'></Col>
+        <Col className='scaffold detail-area'>USBN Details</Col>
       </Row>
       <Row>
-        <Col className='scaffold challenge-area'>1 of 3</Col>
-        <Col className='scaffold static-text-area'>2 of 2</Col>
+        <Col className='scaffold challenge-area' xs={8}>
+          Challenge List
+        </Col>
+        <Col className='scaffold static-text-area'>Static Text</Col>
       </Row>
     </Container>
   )
