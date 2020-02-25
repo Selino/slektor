@@ -1,0 +1,13 @@
+.detail-area {
+  min-height: 300px;
+}
+
+.challenge-area {
+  min-width: 400px;
+  min-height: 300px;
+}
+
+.static-text-area {
+  width: auto;
+  min-height: 300px;
+}
