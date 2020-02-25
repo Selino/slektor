@@ -11,7 +11,7 @@ function BookInfo(props) {
         <Col style={{ padding: "1rem" }}>
           <FontAwesomeIcon
             icon={faBook}
-            style={{ fontSize: "50vh", color: "#ccc" }}
+            style={{ fontSize: "50vw", color: "#ccc" }}
           />
         </Col>
         <Col>
