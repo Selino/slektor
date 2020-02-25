@@ -11,12 +11,12 @@ function BookInfo(props) {
         <Col style={{ padding: "1rem" }}>
           <FontAwesomeIcon
             icon={faBook}
-            style={{ fontSize: "50vw", color: "#ccc" }}
+            style={{ fontSize: "40vw", color: "#ccc" }}
           />
         </Col>
         <Col>
           <h2>Book Title</h2>
-          <div>
+          <div style={{ fontSize: "1.1rem" }}>
             <LoremIpsum />
           </div>
           <h1>${props.challengeTotal}</h1>
