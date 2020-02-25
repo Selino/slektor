@@ -16,7 +16,9 @@ function BookInfo(props) {
         </Col>
         <Col>
           <h2>Book Title</h2>
-          <LoremIpsum avgWordsPerSentence={10} p={1} />
+          <div>
+            <LoremIpsum />
+          </div>
           <h1>${props.challengeTotal}</h1>
         </Col>
       </Row>
