@@ -1,7 +1,8 @@
 import React from "react"
-import "../../Detail.css"
 import { Container, Row, Col } from "react-bootstrap"
 import BookInfo from "./BookInfo"
+import ChallengeCards from "../challenges/ChallengeCards"
+import StaticText from "./StaticText"
 
 export default function DetailContainer() {
   return (
@@ -12,13 +13,18 @@ export default function DetailContainer() {
         </Col>
       </Row>
       <Row>
-        <Col>
+        <Col style={{ marginBottom: "1rem" }}>
           <hr />
         </Col>
       </Row>
       <Row>
-        <Col xs={8}>Challenge List</Col>
-        <Col>Static Text</Col>
+        <Col xs={8}>
+          <ChallengeCards />
+          <ChallengeCards />
+        </Col>
+        <Col>
+          <StaticText />
+        </Col>
       </Row>
     </Container>
   )
