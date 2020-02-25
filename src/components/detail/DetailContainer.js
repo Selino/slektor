@@ -2,6 +2,8 @@ import React from "react"
 import "../../Detail.css"
 import { Container, Row, Col } from "react-bootstrap"
 
+//test
+
 export default function DetailContainer() {
   return (
     <Container>
