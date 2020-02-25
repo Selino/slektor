@@ -1,5 +1,6 @@
 import React from "react"
 import { Card, Button } from "react-bootstrap"
+import LoremIpsum from "react-lorem-ipsum"
 
 export default function ChallengeCards() {
   return (
@@ -7,8 +8,7 @@ export default function ChallengeCards() {
       <Card.Body>
         <Card.Title>Bid $5</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          <LoremIpsum />
         </Card.Text>
         <Button variant='primary'>Do something</Button>
       </Card.Body>

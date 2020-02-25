@@ -4,11 +4,11 @@ import logo from "../../logo.svg"
 
 export default function Nav() {
   return (
-    <Navbar bg='dark' variant='dark'>
+    <Navbar fixed='top' bg='dark' variant='dark'>
       <Navbar.Brand href='#home'>
         <img
           className='App-logo'
-          alt='logo'
+          alt='Slektor App Logo'
           src={logo}
           width='30'
           height='30'
