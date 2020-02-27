@@ -18,15 +18,19 @@ function App() {
           <Nav />
         </header>
         <Switch>
-          <Route path='/detail'>
-            <div>
+          <div className='app-body'>
+            <Route path='/detail'>
               <DetailContainer />
-            </div>
-          </Route>
-          <Route path='/booksearch'>
-            <BookSearch />
-          </Route>
-          <Route exact path='/' render={() => <Redirect to='/booksearch' />} />
+            </Route>
+            <Route path='/booksearch'>
+              <BookSearch />
+            </Route>
+            <Route
+              exact
+              path='/'
+              render={() => <Redirect to='/booksearch' />}
+            />
+          </div>
         </Switch>
       </div>
     </Router>
