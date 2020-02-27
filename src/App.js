@@ -17,8 +17,8 @@ function App() {
         <header className='App-header'>
           <Nav />
         </header>
-        <Switch>
-          <div className='app-body'>
+        <div className='app-body'>
+          <Switch>
             <Route path='/detail'>
               <DetailContainer />
             </Route>
@@ -30,8 +30,8 @@ function App() {
               path='/'
               render={() => <Redirect to='/booksearch' />}
             />
-          </div>
-        </Switch>
+          </Switch>
+        </div>
       </div>
     </Router>
   )
