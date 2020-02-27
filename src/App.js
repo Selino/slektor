@@ -8,17 +8,28 @@ import {
   Route,
   Redirect
 } from "react-router-dom"
+import BookSearch from "./components/booksearch/BookSearch"
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <Nav />
-      </header>
-      <div>
-        <DetailContainer />
+    <Router>
+      <div className='App'>
+        <header className='App-header'>
+          <Nav />
+        </header>
+        <Switch>
+          <Route path='/detail'>
+            <div>
+              <DetailContainer />
+            </div>
+          </Route>
+          <Route path='/booksearch'>
+            <BookSearch />
+          </Route>
+          <Route exact path='/' render={() => <Redirect to='/booksearch' />} />
+        </Switch>
       </div>
-    </div>
+    </Router>
   )
 }
 
