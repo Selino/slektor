@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react"
+import { useSelector, useDispatch } from "react-redux"
 import { Card } from "react-bootstrap"
+import BookSearchForm from "./BookSearchForm"
+import axios from "axios"
 
 function BookSearch() {
   const [state, setState] = useState({
@@ -7,10 +10,6 @@ function BookSearch() {
       items: []
     }
   })
-
-  useEffect(() => {
-    getBookList()
-  }, [])
 
   const getBookList = () =>
     fetch(
@@ -38,9 +37,13 @@ function BookSearch() {
     </Card>
   ))
 
+  useEffect(() => {
+    getBookList()
+  }, [])
+
   return (
     <div>
-      <h1>Books</h1>
+      <BookSearchForm />
       <div>{bookItems}</div>
     </div>
   )
