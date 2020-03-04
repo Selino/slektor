@@ -7,34 +7,52 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { createStore, combineReducers } from "redux"
 import { Provider } from "react-redux"
 import getSampleData from "./sampledata"
-import { v4 as uuid } from "uuid"
+import { v1 as uuidv1, v4 as uuidv4 } from "uuid"
 
-// CREATE_CHALLENGE
-const createChallenge = ({} = {}) => ({
-  type: "CREATE_CHALLENGE",
-  challenge: {
-    id: uuid(),
-    owner: "U1",
-    reader: "U2",
-    status: "running",
-    bookID: "xIItr7-StUEC",
-    amount: 300,
-    createDate: "2020-02-18T19:01:55.687+00:00",
-    expirationDate: "2020-03-03T00:21:48+0000"
-  }
-})
-
-// REMOVE_CHALLENGE
 // UPDATE_CHALLENGE
 
 // SEARCH_BOOKS
 
 // SET_TEXT_FILTER
 
+// REMOVE_CHALLENGE
+const removeChallenge = ({ id = "" } = {}) => ({
+  type: "REMOVE_CHALLENGE",
+  challenge: {
+    id: id
+  }
+})
+
+// CREATE_CHALLENGE generator
+const createChallenge = ({
+  bookID = "",
+  amount = 0,
+  createDate = 0,
+  expirationDate = 0,
+  reader = "",
+  owner = "",
+  id = ""
+} = {}) => ({
+  type: "CREATE_CHALLENGE",
+  challenge: {
+    id,
+    owner,
+    reader,
+    bookID,
+    amount,
+    createDate,
+    expirationDate
+  }
+})
+
 // Challenges Reducer
 const challengesReducerDefault = getSampleData.challenges
 const challengesReducer = (state = challengesReducerDefault, action) => {
   switch (action.type) {
+    case "CREATE_CHALLENGE":
+      return [...state, action.challenge]
+    case "REMOVE_CHALLENGE":
+      return state.filter(({ id }) => id !== action.challenge.id)
     default:
       return state
   }
@@ -66,22 +84,52 @@ const store = createStore(
   })
 )
 
-// store.subscribe(() => {
-console.log(store.getState())
-// })
+store.subscribe(() => {
+  console.log(store.getState())
+})
 
-// store.dispatch({
-//   type: "SEARCH",
-//   name: "Lorem ipsum"
-// })
+Date.prototype.addDays = function(days) {
+  const date = new Date(this.valueOf())
+  date.setDate(date.getDate() + days)
+  return date
+}
 
-// store.dispatch({
-//   type: "ADD"
-// })
+const makeDate = () => {
+  return new Date()
+}
 
-// store.dispatch({
-//   type: "SEARCH"
-// })
+const makeExpirationDate = (days = 0) => {
+  const date = new Date()
+  return date.addDays(days)
+}
+
+const challengeOne = store.dispatch(
+  createChallenge({
+    id: uuidv4(),
+    owner: "U-001",
+    reader: "U-002",
+    status: "running",
+    bookID: uuidv4(),
+    amount: 700,
+    createDate: makeDate(),
+    expirationDate: makeExpirationDate(30)
+  })
+)
+
+const challengeTwo = store.dispatch(
+  createChallenge({
+    id: uuidv4(),
+    owner: "U-002",
+    reader: "U-002",
+    status: "running",
+    bookID: uuidv4(),
+    amount: 200,
+    createDate: makeDate(),
+    expirationDate: makeExpirationDate(30)
+  })
+)
+
+store.dispatch(removeChallenge({ id: challengeOne.challenge.id }))
 
 ReactDOM.render(
   <Provider store={store}>

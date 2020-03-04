@@ -1,6 +1,6 @@
 // https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4
 
-import { v4 as uuid } from "uuid"
+import { v1 as uuidv1, v4 as uuidv4 } from "uuid"
 
 const getSampleData = {
   filters: {
@@ -9,7 +9,7 @@ const getSampleData = {
   },
   challenges: [
     {
-      id: uuid(),
+      id: "I8YWAQAAMAAJ-87USJF",
       owner: "U1",
       reader: "U2",
       status: "running",
