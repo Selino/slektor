@@ -1,7 +1,5 @@
 // https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4
 
-import { v1 as uuidv1, v4 as uuidv4 } from "uuid"
-
 const getSampleData = {
   filters: {
     text: "Lorem",

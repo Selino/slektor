@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { createStore, combineReducers } from "redux"
 import { Provider } from "react-redux"
 import getSampleData from "./sampledata"
-import { v1 as uuidv1, v4 as uuidv4 } from "uuid"
+import { v4 as uuidv4 } from "uuid"
 
 // UPDATE_CHALLENGE
 
