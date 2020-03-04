@@ -1,18 +1,15 @@
-import axios from "axios"
+// SEARCH_BY_TITLE
+// SEARCH_BY_AUTHOR
 
-const myAxios = state => {
-  axios
-    .post(
-      "https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4",
-      state
-    )
-    .then(res => {
-      console.log(res.data)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-}
+// ADD_CHALLENGE
+// REMOVE_CHALLENGE
+// UPDATE_CHALLENGE
+
+// SET_TEXT_FILTER
+// SORT_BY_DATE
+// SORT_BY_TITLE
+// SORT_BY_AUTHOR
+// }
 
 const initialState = {
   counter: 0
@@ -21,8 +18,12 @@ const initialState = {
 function rootReducer(state = initialState, action) {
   switch (action.type) {
     case "SEARCH":
+      const myName = action.name !== undefined ? action.name : "no name"
+      return "searched " + myName
+    case "ADD":
+      return "added"
     default:
-      return { searchResult: state }
+      return state
   }
 }
 

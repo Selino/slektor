@@ -2,10 +2,9 @@ import React from "react"
 import { Button } from "react-bootstrap"
 
 export default function BookSearchForm(props) {
-  const getBookList = props.getBookList
-
   const handleSubmit = e => {
     e.preventDefault()
+    console.log("test")
   }
   return (
     <form
