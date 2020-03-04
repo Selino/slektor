@@ -12,6 +12,12 @@ import { v4 as uuidv4 } from "uuid"
 // UPDATE_CHALLENGE
 
 // SEARCH_BOOKS
+const searchBooks = ({ string = "" } = {}) => ({
+  type: "SEARCH_BOOKS",
+  searchBooks: {
+    string
+  }
+})
 
 // SET_TEXT_FILTER
 
@@ -71,6 +77,8 @@ const filtersReducer = (state = filtersReducerDefault, action) => {
 const booksReducerDefault = getSampleData.items
 const booksReducer = (state = booksReducerDefault, action) => {
   switch (action.type) {
+    case "SEARCH_BOOKS":
+      return action.searchBooks.string
     default:
       return state
   }
@@ -80,7 +88,8 @@ const store = createStore(
   combineReducers({
     challenges: challengesReducer,
     books: booksReducer,
-    filters: filtersReducer
+    filters: filtersReducer,
+    searchBooks: booksReducer
   })
 )
 
@@ -129,7 +138,15 @@ const challengeTwo = store.dispatch(
   })
 )
 
+const bookSearchOne = store.dispatch(
+  searchBooks({
+    string: "The Big Bible"
+  })
+)
+
 store.dispatch(removeChallenge({ id: challengeOne.challenge.id }))
+
+store.dispatch(searchBooks({ string: bookSearchOne.searchBooks.string }))
 
 ReactDOM.render(
   <Provider store={store}>

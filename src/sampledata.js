@@ -5,6 +5,9 @@ const getSampleData = {
     text: "Lorem",
     sortBy: ""
   },
+  searchBooks: {
+    string: "The Hobbit"
+  },
   challenges: [
     {
       id: "I8YWAQAAMAAJ-87USJF",
