@@ -6,15 +6,21 @@ import * as serviceWorker from "./serviceWorker"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { createStore, combineReducers } from "redux"
 import { Provider } from "react-redux"
-import getSampleData from "./sampledata"
+import getSampleData, { simulatedSearchData } from "./sampledata"
 import { v4 as uuidv4 } from "uuid"
+
+// simulated search function
+function simulateSearch(string) {
+  console.log(`Simulated search for ${string}`)
+  return simulatedSearchData.items
+}
 
 // UPDATE_CHALLENGE
 
 // SEARCH_BOOKS
-const searchBooks = ({ string = "" } = {}) => ({
-  type: "SEARCH_BOOKS",
-  searchBooks: {
+const searchString = ({ string = "" } = {}) => ({
+  type: "SEARCH_STRING",
+  searchString: {
     string
   }
 })
@@ -22,14 +28,14 @@ const searchBooks = ({ string = "" } = {}) => ({
 // SET_TEXT_FILTER
 
 // REMOVE_CHALLENGE
-const removeChallenge = ({ id = "" } = {}) => ({
+const removeChallenge = ({ id } = {}) => ({
   type: "REMOVE_CHALLENGE",
   challenge: {
     id: id
   }
 })
 
-// CREATE_CHALLENGE generator
+// CREATE_CHALLENGE
 const createChallenge = ({
   bookID = "",
   amount = 0,
@@ -77,8 +83,9 @@ const filtersReducer = (state = filtersReducerDefault, action) => {
 const booksReducerDefault = getSampleData.items
 const booksReducer = (state = booksReducerDefault, action) => {
   switch (action.type) {
-    case "SEARCH_BOOKS":
-      return action.searchBooks.string
+    case "SEARCH_STRING":
+      // insert search function here
+      return simulateSearch(action.searchString.string)
     default:
       return state
   }
@@ -88,29 +95,27 @@ const store = createStore(
   combineReducers({
     challenges: challengesReducer,
     books: booksReducer,
-    filters: filtersReducer,
-    searchBooks: booksReducer
+    filters: filtersReducer
   })
 )
 
-store.subscribe(() => {
-  console.log(store.getState())
-})
-
+// utilities to adds days to date
 Date.prototype.addDays = function(days) {
   const date = new Date(this.valueOf())
   date.setDate(date.getDate() + days)
   return date
 }
-
 const makeDate = () => {
   return new Date()
 }
-
 const makeExpirationDate = (days = 0) => {
   const date = new Date()
   return date.addDays(days)
 }
+
+store.subscribe(() => {
+  console.log(store.getState())
+})
 
 const challengeOne = store.dispatch(
   createChallenge({
@@ -138,15 +143,15 @@ const challengeTwo = store.dispatch(
   })
 )
 
-const bookSearchOne = store.dispatch(
-  searchBooks({
-    string: "The Big Bible"
+store.dispatch(removeChallenge({ id: challengeOne.challenge.id }))
+
+store.dispatch(
+  searchString({
+    string: "The Hobbit"
   })
 )
 
-store.dispatch(removeChallenge({ id: challengeOne.challenge.id }))
-
-store.dispatch(searchBooks({ string: bookSearchOne.searchBooks.string }))
+// store.dispatch(searchBooks({ string: bookSearchOne.searchBooks.string }))
 
 ReactDOM.render(
   <Provider store={store}>

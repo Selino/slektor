@@ -1,11 +1,46 @@
 // https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4
 
+export const simulatedSearchData = {
+  items: [
+    {
+      id: "pD6arNyKyi8C",
+      volumeInfo: {
+        title: "The Hobbit",
+        imageLinks: {
+          smallThumbnail:
+            "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        }
+      }
+    },
+    {
+      id: "hFfhrCWiLSMC",
+      volumeInfo: {
+        title: "The Hobbit, Or, There and Back Again",
+        imageLinks: {
+          smallThumbnail:
+            "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        }
+      }
+    },
+    {
+      id: "H8ON-dTgQQYC",
+      volumeInfo: {
+        title: "The Hobbit",
+        imageLinks: {
+          smallThumbnail:
+            "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        }
+      }
+    }
+  ]
+}
+
 const getSampleData = {
   filters: {
     text: "Lorem",
     sortBy: ""
   },
-  searchBooks: {
+  searchString: {
     string: "The Hobbit"
   },
   challenges: [
