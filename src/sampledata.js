@@ -37,8 +37,10 @@ export const simulatedSearchData = {
 
 const getSampleData = {
   filters: {
-    text: "Lorem",
-    sortBy: ""
+    searchBooksText: "Lorem",
+    sortBooksBy: "title",
+    sortChallengesBy: "date-expiring",
+    sortChallengesByDateSpecified: 789
   },
   searchString: {
     string: "The Hobbit"
