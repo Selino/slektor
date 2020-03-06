@@ -14,3 +14,12 @@ export const sortChallengesByDateSpecified = date => ({
   type: "SORT_CHALLENGES_BY_DATE_SPECIFIED",
   sortChallengesByDateSpecified: date
 })
+
+// ------- books filters
+export const sortBooksByAuthor = () => ({
+  type: "SORT_BOOKS_BY_AUTHOR"
+})
+
+export const sortBooksByTitle = () => ({
+  type: "SORT_BOOKS_BY_TITLE"
+})

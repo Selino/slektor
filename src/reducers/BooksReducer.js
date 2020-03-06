@@ -1,5 +1,5 @@
 import getSampleData from "../sampledata"
-import { simulateSearch } from "../selectors/Utils"
+import { simulateSearch } from "../utilities/Utils"
 
 const booksReducerDefault = getSampleData.items
 export default (state = booksReducerDefault, action) => {

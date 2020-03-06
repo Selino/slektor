@@ -3,32 +3,56 @@
 export const simulatedSearchData = {
   items: [
     {
-      id: "pD6arNyKyi8C",
+      id: "LHTexEiizN4C",
       volumeInfo: {
-        title: "The Hobbit",
+        title: "The Shit Book",
+        authors: ["Thomas N. Bainter"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+            "http://books.google.com/books/content?id=LHTexEiizN4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     },
     {
-      id: "hFfhrCWiLSMC",
+      id: "p6Jdgx-lWZ8C",
       volumeInfo: {
-        title: "The Hobbit, Or, There and Back Again",
+        title: "What's Your Poo Telling You?",
+        authors: ["Josh Richman", "Anish Sheth"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+            "http://books.google.com/books/content?id=p6Jdgx-lWZ8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     },
     {
-      id: "H8ON-dTgQQYC",
+      id: "I8YWAQAAMAAJ",
       volumeInfo: {
-        title: "The Hobbit",
+        title: "It Hurts when I Poop!",
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+            "http://books.google.com/books/content?id=I8YWAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+        }
+      }
+    },
+    {
+      id: "KnLpwAEACAAJ",
+      volumeInfo: {
+        title: "Where's the Poop?",
+        authors: ["Julie Markes"],
+        imageLinks: {
+          smallThumbnail:
+            "http://books.google.com/books/content?id=KnLpwAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+        }
+      }
+    },
+    {
+      id: "x1RxVwq45cEC",
+      volumeInfo: {
+        title: "Kama Pootra",
+        authors: ["Daniel Cole Young"],
+        imageLinks: {
+          smallThumbnail:
+            "http://books.google.com/books/content?id=x1RxVwq45cEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     }
@@ -41,9 +65,6 @@ const getSampleData = {
     sortBooksBy: "title",
     sortChallengesBy: "date-expiring",
     sortChallengesByDateSpecified: 789
-  },
-  searchString: {
-    string: "The Hobbit"
   },
   challenges: [
     {
@@ -59,52 +80,57 @@ const getSampleData = {
   ],
   items: [
     {
-      id: "LHTexEiizN4C",
+      id: "pD6arNyKyi8C",
       volumeInfo: {
-        title: "The Shit Book",
+        title: "The Hobbit",
+        authors: ["J.R.R. Tolkien"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=LHTexEiizN4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+            "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     },
     {
-      id: "I8YWAQAAMAAJ",
+      id: "hFfhrCWiLSMC",
       volumeInfo: {
-        title: "It Hurts when I Poop!",
+        title: "The Hobbit, Or, There and Back Again",
+        authors: ["John Ronald Reuel Tolkien"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=I8YWAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
+            "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     },
     {
-      id: "p6Jdgx-lWZ8C",
+      id: "H8ON-dTgQQYC",
       volumeInfo: {
-        title: "What's Your Poo Telling You?",
+        title: "The Hobbit",
+        authors: ["Jude Fisher"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=p6Jdgx-lWZ8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+            "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     },
     {
-      id: "x1RxVwq45cEC",
+      id: "KY0BDObXftUC",
       volumeInfo: {
-        title: "Kama Pootra",
+        title: "Exploring J.R.R. Tolkien's The Hobbit",
+        authors: ["Corey Olsen"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=x1RxVwq45cEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+            "http://books.google.com/books/content?id=KY0BDObXftUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     },
     {
-      id: "xIItr7-StUEC",
+      id: "N_0VhzQKIIAC",
       volumeInfo: {
-        title: "Eat, Sleep, Poop",
+        title: "Finding God in the Hobbit",
+        authors: ["Jim Ware"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=xIItr7-StUEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+            "http://books.google.com/books/content?id=N_0VhzQKIIAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
         }
       }
     }

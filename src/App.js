@@ -3,7 +3,7 @@ import "./App.css"
 import DetailContainer from "./components/detail/DetailContainer"
 import Nav from "./components/nav/Nav"
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
-import BookSearch from "./components/booksearch/BookSearch"
+import BookList from "./components/booksearch/BookList"
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
         <Nav />
         <div className='app-body'>
           <Route path='/detail' component={DetailContainer} />
-          <Route path='/booksearch' component={BookSearch} />
-          <Route exact path='' render={() => <Redirect to='/booksearch' />} />
+          <Route path='/booklist' component={BookList} />
+          <Route exact path='' render={() => <Redirect to='/booklist' />} />
         </div>
       </div>
     </Router>
