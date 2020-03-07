@@ -1,16 +1,16 @@
 import React from "react"
-// import { useSelector, useDispatch } from "react-redux"
 import { Card } from "react-bootstrap"
 import BookSearchForm from "./BookSearchForm"
-// import { sortBooksByAuthor } from "../../actions/FiltersActions"
 import { connect } from "react-redux"
+// import { sortBooksByAuthor } from "../../actions/FiltersActions"
 
 function BookList(props) {
   const bookItems = props.books.map(book => (
     <Card key={book.id} style={{ marginBottom: "1rem" }}>
       <Card.Body>
-        {book.volumeInfo.imageLinks != undefined && (
+        {book.volumeInfo.imageLinks !== undefined && (
           <img
+            alt={book.volumeInfo.title}
             style={{ float: "left", margin: "0 1rem 1rem 0" }}
             src={book.volumeInfo.imageLinks.smallThumbnail}
           />
@@ -24,20 +24,21 @@ function BookList(props) {
 
   return (
     <div>
-      <BookSearchForm />
+      <BookSearchForm props={props} />
       {bookItems}
     </div>
   )
 }
-
-const ConnectedBookList = connect(state => {
+const mapStateToProps = state => {
   return {
-    sortBy: state.filters.sortBooksBy,
-    books: state.books
+    books: state.books,
+    filters: {
+      sortBooksBy: state.filters.sortBooksBy
+    }
   }
-})(BookList)
+}
 
-export default ConnectedBookList
+export default connect(mapStateToProps)(BookList)
 
 // const [state, setState] = useState({
 //   data: {

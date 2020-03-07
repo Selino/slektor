@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import { createStore, combineReducers } from "redux"
 import { Provider } from "react-redux"
 import getSampleData, { simulatedSearchData } from "./sampledata"
+import { v4 as uuidv4 } from "uuid"
 
 // ------- action generators
 const sortBooksByAuthor = () => ({
@@ -27,6 +28,7 @@ const searchString = ({ string = "" } = {}) => ({
 const createChallenge = ({
   id = "",
   bookID = "",
+  bookTitle = "",
   amount = 0,
   createDate = 0,
   expirationDate = 0,
@@ -39,6 +41,7 @@ const createChallenge = ({
     owner,
     reader,
     bookID,
+    bookTitle,
     amount,
     createDate,
     expirationDate
@@ -72,9 +75,9 @@ const sortChallengesByAmount = () => ({
   type: "SORT_CHALLENEGES_BY_AMOUNT"
 })
 
-const sortChallengesByDateSpecified = date => ({
+const sortChallengesByDate = () => ({
   type: "SORT_CHALLENGES_BY_DATE_SPECIFIED",
-  sortChallengesByDateSpecified: date
+  sortChallengesBy: "date"
 })
 
 // ------- reducers
@@ -133,21 +136,31 @@ const booksReducer = (state = booksReducerDefault, action) => {
 }
 
 // -------- utilities
+
 function simulateSearch(string) {
   return simulatedSearchData.items
 }
 
-Date.prototype.addDays = function(days) {
-  const date = new Date(this.valueOf())
-  date.setDate(date.getDate() + days)
-  return date
-}
 const makeDate = () => {
-  return new Date()
+  return new Date().getTime()
 }
-const makeExpirationDate = (days = 0) => {
-  const date = new Date()
-  return date.addDays(days)
+
+const makeExpirationDate = days => {
+  return days * 24 * 60 * 60 * 1000
+}
+
+const getVisibleChallenges = (
+  challenges,
+  { bookTitle, createDate, expirationDate }
+) => {
+  // return challenges
+  return challenges.filter(challenges => {
+    const createDateMatch = false
+    const expirationDateMatch = false
+    const textMatch = false
+
+    return createDateMatch && expirationDateMatch && textMatch
+  })
 }
 
 // ------- init store & subscribe
@@ -160,35 +173,42 @@ const store = createStore(
 )
 
 store.subscribe(() => {
-  console.log(store.getState())
+  const state = store.getState()
+  const visibleChallenges = getVisibleChallenges(
+    state.challenges,
+    state.filters
+  )
+  console.log(visibleChallenges)
 })
 
 // ------- dispatch calls
-// const challengeOne = store.dispatch(
-//   createChallenge({
-//     id: uuidv4(),
-//     owner: "U-001",
-//     reader: "U-002",
-//     status: "running",
-//     bookID: uuidv4(),
-//     amount: 700,
-//     createDate: makeDate(),
-//     expirationDate: makeExpirationDate(30)
-//   })
-// )
+const challengeOne = store.dispatch(
+  createChallenge({
+    id: uuidv4(),
+    owner: "U-001",
+    reader: "U-002",
+    status: "running",
+    bookID: uuidv4(),
+    bookTitle: "Random Name",
+    amount: 700,
+    createDate: makeDate(),
+    expirationDate: makeExpirationDate(30)
+  })
+)
 
-// const challengeTwo = store.dispatch(
-//   createChallenge({
-//     id: uuidv4(),
-//     owner: "U-002",
-//     reader: "U-002",
-//     status: "running",
-//     bookID: uuidv4(),
-//     amount: 200,
-//     createDate: makeDate(),
-//     expirationDate: makeExpirationDate(30)
-//   })
-// )
+const challengeTwo = store.dispatch(
+  createChallenge({
+    id: uuidv4(),
+    owner: "U-002",
+    reader: "U-002",
+    status: "running",
+    bookID: uuidv4(),
+    bookTitle: "The Road",
+    amount: 200,
+    createDate: makeDate(),
+    expirationDate: makeExpirationDate(30)
+  })
+)
 
 // store.dispatch(removeChallenge({ id: challengeOne.challenge.id }))
 
@@ -204,7 +224,7 @@ store.subscribe(() => {
 
 store.dispatch(sortBooksByAuthor())
 
-store.dispatch(sortChallengesByDateSpecified(123))
+store.dispatch(sortChallengesByDate())
 
 // -------
 

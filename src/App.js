@@ -1,9 +1,9 @@
 import React from "react"
 import "./App.css"
-import DetailContainer from "./components/detail/DetailContainer"
 import Nav from "./components/nav/Nav"
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import BookList from "./components/booksearch/BookList"
+import ChallengesList from "./components/challenges/ChallengesList"
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
       <div className='App'>
         <Nav />
         <div className='app-body'>
-          <Route path='/detail' component={DetailContainer} />
+          <Route path='/challenges' component={ChallengesList} />
           <Route path='/booklist' component={BookList} />
-          <Route exact path='' render={() => <Redirect to='/booklist' />} />
+          <Route exact path='' render={() => <Redirect to='/challenges' />} />
         </div>
       </div>
     </Router>

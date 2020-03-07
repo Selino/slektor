@@ -61,10 +61,9 @@ export const simulatedSearchData = {
 
 const getSampleData = {
   filters: {
-    searchBooksText: "Lorem",
-    sortBooksBy: "title",
     sortChallengesBy: "date-expiring",
-    sortChallengesByDateSpecified: 789
+    startDate: 1,
+    endDate: 1
   },
   challenges: [
     {
@@ -73,9 +72,21 @@ const getSampleData = {
       reader: "U2",
       status: "running",
       bookID: "xIItr7-StUEC",
+      bookTitle: "The Hobbit",
+      amount: 500,
+      createDate: 1583456461,
+      expirationDate: 1583524442
+    },
+    {
+      id: "IIGDJMAAJ-87USJF",
+      owner: "U2",
+      reader: "U2",
+      status: "running",
+      bookID: "H8ON-dTgQQYC",
+      bookTitle: "The ",
       amount: 300,
-      createDate: "2020-02-18T19:01:55.687+00:00",
-      expirationDate: "2020-03-03T00:21:48+0000"
+      createDate: 1583456461,
+      expirationDate: 1583524442
     }
   ],
   items: [
