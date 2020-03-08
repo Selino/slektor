@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap"
 // import { v4 as uuidv4 } from "uuid"
 // import { createChallenge } from "../../actions/ChallengesActions"
 // import { makeDate, makeExpirationDate } from "../../utilities/Utils"
-import { sortBooksByAuthor } from "../../actions/FiltersActions"
+// import { sortBooksByAuthor } from "../../actions/FiltersActions"
 
 export default function BookSearchForm(props) {
   const handleSubmit = e => {

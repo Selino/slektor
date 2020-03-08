@@ -22,12 +22,7 @@ function BookList(props) {
     </Card>
   ))
 
-  return (
-    <div>
-      <BookSearchForm props={props} />
-      {bookItems}
-    </div>
-  )
+  return <div>{bookItems}</div>
 }
 const mapStateToProps = state => {
   return {
@@ -39,24 +34,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(BookList)
-
-// const [state, setState] = useState({
-//   data: {
-//     items: []
-//   }
-// })
-
-// useEffect(() => {
-//   getBookList()
-// }, [])
-
-// const getBookList = () =>
-//   fetch(
-//     "https://www.googleapis.com/books/v1/volumes?q=hobbit&maxResults=40&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4&fields=items(id,volumeInfo(title,description,authors,imageLinks/smallThumbnail))"
-//   )
-//     .then(res => res.json())
-//     .then(data => setState({ data }))
-//     .catch(err => {
-//       console.log(err)
-//     })
-// ))
