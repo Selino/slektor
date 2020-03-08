@@ -68,33 +68,39 @@ const getSampleData = {
   challenges: [
     {
       id: "1",
-      owner: "U1",
-      reader: "U2",
+      owner: "John Doe",
+      reader: "Steve Jang",
       status: "running",
       bookID: "xIItr7-StUEC",
       bookTitle: "The Hobbit",
+      bookThumbnail:
+        "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 500,
       createDate: 1583456461,
       expirationDate: 1583524442
     },
     {
       id: "2",
-      owner: "U2",
-      reader: "U2",
+      owner: "Steve Jang",
+      reader: "Jane Wilder",
       status: "running",
       bookID: "H8ON-dTgQQYC",
-      bookTitle: "The ",
+      bookTitle: "Kama Pootra ",
+      bookThumbnail:
+        "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 300,
       createDate: 1583456461,
       expirationDate: 1583524442
     },
     {
       id: "3",
-      owner: "U2",
-      reader: "U2",
+      owner: "Carol Johnson",
+      reader: "Mie Butt",
       status: "running",
       bookID: "H8ON-dTgQQYC",
-      bookTitle: "The ",
+      bookTitle: "The Hobbit, Or, There and Back Again ",
+      bookThumbnail:
+        "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 1500,
       createDate: 1583456461,
       expirationDate: 1583524442
