@@ -67,7 +67,7 @@ const getSampleData = {
   },
   challenges: [
     {
-      id: "I8YWAQAAMAAJ-87USJF",
+      id: "1",
       owner: "U1",
       reader: "U2",
       status: "running",
@@ -78,13 +78,24 @@ const getSampleData = {
       expirationDate: 1583524442
     },
     {
-      id: "IIGDJMAAJ-87USJF",
+      id: "2",
       owner: "U2",
       reader: "U2",
       status: "running",
       bookID: "H8ON-dTgQQYC",
       bookTitle: "The ",
       amount: 300,
+      createDate: 1583456461,
+      expirationDate: 1583524442
+    },
+    {
+      id: "3",
+      owner: "U2",
+      reader: "U2",
+      status: "running",
+      bookID: "H8ON-dTgQQYC",
+      bookTitle: "The ",
+      amount: 1500,
       createDate: 1583456461,
       expirationDate: 1583524442
     }
