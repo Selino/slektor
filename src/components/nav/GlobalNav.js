@@ -6,7 +6,7 @@ import { LinkContainer } from "react-router-bootstrap"
 export default function globalNav() {
   return (
     <header className='App-header'>
-      <Navbar bg='dark' variant='dark'>
+      <Navbar fixed='top' bg='dark' variant='dark'>
         <Navbar.Brand href='#home'>
           <img
             alt='Slektor App Logo'

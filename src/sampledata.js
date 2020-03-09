@@ -62,8 +62,8 @@ export const simulatedSearchData = {
 const getSampleData = {
   filters: {
     sortChallengesBy: "date-expiring",
-    startDate: 1,
-    endDate: 1
+    startDate: 1581022995,
+    endDate: 1583787795
   },
   challenges: [
     {

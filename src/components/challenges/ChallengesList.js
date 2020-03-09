@@ -23,7 +23,13 @@ function ChallengesList(props) {
             style={{ float: "left", marginRight: "2rem" }}
           />
           <div style={{ marginBottom: "1rem" }}>
-            <Badge variant='primary'>{challenge.owner}</Badge>
+            <Badge style={{ marginRight: ".5rem" }} variant='primary'>
+              Challenger is {challenge.owner}
+            </Badge>
+            <Badge style={{ marginRight: ".5rem" }} variant='secondary'>
+              Created {challenge.createDate}
+            </Badge>
+            <Badge variant='secondary'>Ends {challenge.expirationDate}</Badge>
           </div>
           {loremIpsum()}
         </Card.Text>
