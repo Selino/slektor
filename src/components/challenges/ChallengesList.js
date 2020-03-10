@@ -2,6 +2,8 @@ import React from "react"
 import { connect } from "react-redux"
 import "moment-timezone"
 import ChallengeListItem from "./ChallengeListItem"
+import { getVisibleItems } from "../../utilities/Utils"
+import ChallengeListFilters from "./ChallengeListFilters"
 
 function ChallengesList(props) {
   // const challengeItems = props.challenges.map(challenge => (
@@ -11,7 +13,7 @@ function ChallengesList(props) {
   return (
     <div>
       <h3>Challenges List</h3>
-      <strong>{props.filters.text}</strong>
+      <ChallengeListFilters />
       {props.challenges.map(challenge => {
         return <ChallengeListItem key={challenge.id} {...challenge} />
       })}
@@ -21,8 +23,7 @@ function ChallengesList(props) {
 
 const mapStateToProps = state => {
   return {
-    challenges: state.challenges,
-    filters: state.filters
+    challenges: getVisibleItems(state.challenges, state.filters)
   }
 }
 

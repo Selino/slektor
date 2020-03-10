@@ -62,9 +62,9 @@ export const simulatedSearchData = {
 const getSampleData = {
   filters: {
     sortBy: "date",
-    startDate: 1581022995,
-    endDate: 1583787795,
-    text: "John"
+    startDate: null,
+    endDate: null,
+    text: "Hobbit"
   },
   challenges: [
     {
