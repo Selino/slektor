@@ -61,9 +61,10 @@ export const simulatedSearchData = {
 
 const getSampleData = {
   filters: {
-    sortChallengesBy: "date-expiring",
+    sortBy: "date",
     startDate: 1581022995,
-    endDate: 1583787795
+    endDate: 1583787795,
+    text: "John"
   },
   challenges: [
     {
@@ -76,8 +77,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 500,
-      createDate: 1583456461,
-      expirationDate: 1583524442
+      startDate: 1583456461,
+      eandDate: 1583787795
     },
     {
       id: "2",
@@ -89,8 +90,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 300,
-      createDate: 1583456461,
-      expirationDate: 1583524442
+      startDate: 1581022995,
+      eandDate: 1583524442
     },
     {
       id: "3",
@@ -102,8 +103,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 1500,
-      createDate: 1583456461,
-      expirationDate: 1583524442
+      startDate: 1583456461,
+      eandDate: 1583524442
     }
   ],
   items: [

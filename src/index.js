@@ -6,8 +6,12 @@ import * as serviceWorker from "./serviceWorker"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Provider } from "react-redux"
 import configureStore from "./store/configureStore"
+import { setTextFilter } from "./actions/FiltersActions" // <-- remove later
+import { getVisibleItems } from "./utilities/Utils"
 
 const store = configureStore()
+
+// put test dispatches here
 
 ReactDOM.render(
   <Provider store={store}>

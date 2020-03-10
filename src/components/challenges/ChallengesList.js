@@ -1,53 +1,28 @@
 import React from "react"
-import { Card, Badge, Image } from "react-bootstrap"
-import { loremIpsum } from "react-lorem-ipsum"
 import { connect } from "react-redux"
-import Dinero from "dinero.js"
+import "moment-timezone"
+import ChallengeListItem from "./ChallengeListItem"
 
 function ChallengesList(props) {
-  const challengeItems = props.challenges.map(challenge => (
-    <Card key={challenge.id} style={{ marginBottom: "2rem" }}>
-      <Card.Body>
-        <Card.Title>{challenge.bookTitle}</Card.Title>
-        <Card.Subtitle className='mb-2 text-muted'>
-          Current Bid :{" "}
-          {Dinero({
-            amount: challenge.amount,
-            currency: "USD"
-          }).toFormat("$0,0.00")}
-        </Card.Subtitle>
-        <Card.Text>
-          <Image
-            rounded
-            src={challenge.bookThumbnail}
-            style={{ float: "left", marginRight: "2rem" }}
-          />
-          <div style={{ marginBottom: "1rem" }}>
-            <Badge style={{ marginRight: ".5rem" }} variant='primary'>
-              Challenger is {challenge.owner}
-            </Badge>
-            <Badge style={{ marginRight: ".5rem" }} variant='secondary'>
-              Created {challenge.createDate}
-            </Badge>
-            <Badge variant='secondary'>Ends {challenge.expirationDate}</Badge>
-          </div>
-          {loremIpsum()}
-        </Card.Text>
-      </Card.Body>
-    </Card>
-  ))
+  // const challengeItems = props.challenges.map(challenge => (
+  //   <ChallengeListItem key={challenge.bookID} props={challenge} />
+  // ))
 
   return (
     <div>
       <h3>Challenges List</h3>
-      {challengeItems}
+      <strong>{props.filters.text}</strong>
+      {props.challenges.map(challenge => {
+        return <ChallengeListItem key={challenge.id} {...challenge} />
+      })}
     </div>
   )
 }
 
 const mapStateToProps = state => {
   return {
-    challenges: state.challenges
+    challenges: state.challenges,
+    filters: state.filters
   }
 }
 

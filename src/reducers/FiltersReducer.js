@@ -1,20 +1,32 @@
 import getSampleData from "../sampledata"
 
-const filtersReducerDefault = getSampleData.filters
-export default (state = filtersReducerDefault, action) => {
+const filtersReducerDefaultState = getSampleData.filters
+export default (state = filtersReducerDefaultState, action) => {
   switch (action.type) {
-    case "SORT_BOOKS_BY_TITLE":
-      return { ...state, sortBooksBy: "title" }
-    case "SORT_BOOKS_BY_AUTHOR":
-      return { ...state, sortBooksBy: "author" }
-    case "SORT_CHALLENGES_BY_DATE_CREATED":
-      return { ...state, sortChallengesBy: "date-created" }
-    case "SORT_CHALLENGES_BY_DATE_EXPIRING":
-      return { ...state, sortChallengesBy: "date-expiring" }
-    case "SORT_CHALLENGES_BY_DATE_SPECIFIED":
+    case "SET_TEXT_FILTER":
       return {
         ...state,
-        ...action
+        text: action.text
+      }
+    case "SORT_BY_AMOUNT":
+      return {
+        ...state,
+        sortBy: "amount"
+      }
+    case "SORT_BY_DATE":
+      return {
+        ...state,
+        sortBy: "date"
+      }
+    case "SET_START_DATE":
+      return {
+        ...state,
+        startDate: action.startDate
+      }
+    case "SET_END_DATE":
+      return {
+        ...state,
+        endDate: action.endDate
       }
     default:
       return state

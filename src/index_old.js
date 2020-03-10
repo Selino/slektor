@@ -63,21 +63,32 @@ const updateChallenge = (id, updates) => ({
   }
 })
 
-const sortChallengesByDateCreated = () => ({
-  type: "SORT_CHALLENGES_BY_DATE_CREATED"
+// SET_TEXT_FILTER
+export const setTextFilter = (text = "") => ({
+  type: "SET_TEXT_FILTER",
+  text
 })
 
-const sortChallengesByDateExpiring = () => ({
-  type: "SORT_CHALLENGES_BY_DATE_EXPIRING"
+// SORT_BY_DATE
+export const sortByDate = () => ({
+  type: "SORT_BY_DATE"
 })
 
-const sortChallengesByAmount = () => ({
-  type: "SORT_CHALLENEGES_BY_AMOUNT"
+// SORT_BY_AMOUNT
+export const sortByAmount = () => ({
+  type: "SORT_BY_AMOUNT"
 })
 
-const sortChallengesByDate = () => ({
-  type: "SORT_CHALLENGES_BY_DATE_SPECIFIED",
-  sortChallengesBy: "date"
+// SET_START_DATE
+export const setStartDate = startDate => ({
+  type: "SET_START_DATE",
+  startDate
+})
+
+// SET_END_DATE
+export const setEndDate = endDate => ({
+  type: "SET_END_DATE",
+  endDate
 })
 
 // ------- reducers
@@ -104,21 +115,34 @@ const challengesReducer = (state = challengesReducerDefault, action) => {
   }
 }
 
-const filtersReducerDefault = getSampleData.filters
-const filtersReducer = (state = filtersReducerDefault, action) => {
+// Filters Reducer
+const filtersReducerDefaultState = getSampleData.filters
+const filtersReducer = (state = filtersReducerDefaultState, action) => {
   switch (action.type) {
-    case "SORT_BOOKS_BY_TITLE":
-      return { ...state, sortBooksBy: "title" }
-    case "SORT_BOOKS_BY_AUTHOR":
-      return { ...state, sortBooksBy: "author" }
-    case "SORT_CHALLENGES_BY_DATE_CREATED":
-      return { ...state, sortChallengesBy: "date-created" }
-    case "SORT_CHALLENGES_BY_DATE_EXPIRING":
-      return { ...state, sortChallengesBy: "date-expiring" }
-    case "SORT_CHALLENGES_BY_DATE_SPECIFIED":
+    case "SET_TEXT_FILTER":
       return {
         ...state,
-        ...action
+        text: action.text
+      }
+    case "SORT_BY_AMOUNT":
+      return {
+        ...state,
+        sortBy: "amount"
+      }
+    case "SORT_BY_DATE":
+      return {
+        ...state,
+        sortBy: "date"
+      }
+    case "SET_START_DATE":
+      return {
+        ...state,
+        startDate: action.startDate
+      }
+    case "SET_END_DATE":
+      return {
+        ...state,
+        endDate: action.endDate
       }
     default:
       return state
@@ -222,9 +246,11 @@ const challengeTwo = store.dispatch(
 
 // store.dispatch(sortBooksByTitle())
 
-store.dispatch(sortBooksByAuthor())
+// store.dispatch(sortBooksByAuthor())
 
-store.dispatch(sortChallengesByDate())
+// store.dispatch(sortChallengesByDate())
+
+store.dispatch(setTextFilter("Jane"))
 
 // -------
 

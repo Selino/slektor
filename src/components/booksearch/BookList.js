@@ -1,8 +1,6 @@
 import React from "react"
 import { Card } from "react-bootstrap"
-import BookSearchForm from "./BookSearchForm"
 import { connect } from "react-redux"
-// import { sortBooksByAuthor } from "../../actions/FiltersActions"
 
 function BookList(props) {
   const bookItems = props.books.map(book => (

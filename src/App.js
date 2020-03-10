@@ -4,6 +4,7 @@ import GlobalNav from "./components/nav/GlobalNav"
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom"
 import BookList from "./components/booksearch/BookList"
 import ChallengesList from "./components/challenges/ChallengesList"
+import getVisibleItems from "./utilities/Utils"
 
 function App() {
   return (

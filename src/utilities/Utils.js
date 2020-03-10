@@ -4,15 +4,21 @@ export const simulateSearch = string => {
   return simulatedSearchData.items
 }
 
-// Date.prototype.addDays = function(days) {
-//   const date = new Date(this.valueOf())
-//   date.setDate(date.getDate() + days)
-//   return date
-// }
-// export const makeDate = () => {
-//   return new Date()
-// }
-// export const makeExpirationDate = (days = 0) => {
-//   const date = new Date()
-//   return date.addDays(days)
-// }
+export const getVisibleItems = (item, { text, startDate, endDate, sortBy }) => {
+  return item
+    .filter(item => {
+      const startDateMatch =
+        typeof startDate !== "number" || item.createdAt >= startDate
+      const endDateMatch =
+        typeof endDate !== "number" || item.createdAt <= endDate
+      const textMatch = item.owner.toLowerCase().includes(text.toLowerCase())
+      return startDateMatch && endDateMatch && textMatch
+    })
+    .sort((a, b) => {
+      if (sortBy === "date") {
+        return a.startDate < b.endDate ? 1 : -1
+      } else if (sortBy === "amount") {
+        return a.amount < b.amount ? 1 : -1
+      }
+    })
+}

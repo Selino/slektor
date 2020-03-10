@@ -1,25 +1,27 @@
-export const sortChallengesByDateCreated = () => ({
-  type: "SORT_CHALLENGES_BY_DATE_CREATED"
+// SET_TEXT_FILTER
+export const setTextFilter = (text = "") => ({
+  type: "SET_TEXT_FILTER",
+  text
 })
 
-export const sortChallengesByDateExpiring = () => ({
-  type: "SORT_CHALLENGES_BY_DATE_EXPIRING"
+// SORT_BY_DATE
+export const sortByDate = () => ({
+  type: "SORT_BY_DATE"
 })
 
-export const sortChallengesByAmount = () => ({
-  type: "SORT_CHALLENEGES_BY_AMOUNT"
+// SORT_BY_AMOUNT
+export const sortByAmount = () => ({
+  type: "SORT_BY_AMOUNT"
 })
 
-export const sortChallengesByDateSpecified = date => ({
-  type: "SORT_CHALLENGES_BY_DATE_SPECIFIED",
-  sortChallengesByDateSpecified: date
+// SET_START_DATE
+export const setStartDate = startDate => ({
+  type: "SET_START_DATE",
+  startDate
 })
 
-// ------- books filters
-export const sortBooksByAuthor = () => ({
-  type: "SORT_BOOKS_BY_AUTHOR"
-})
-
-export const sortBooksByTitle = () => ({
-  type: "SORT_BOOKS_BY_TITLE"
+// SET_END_DATE
+export const setEndDate = endDate => ({
+  type: "SET_END_DATE",
+  endDate
 })
