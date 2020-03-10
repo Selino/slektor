@@ -45,7 +45,8 @@ export default function ChallengeListItem(props) {
           </strong>
         </div>
         <Card.Text>
-          <img
+          <Image
+            rounded
             src={bookThumbnail}
             style={{ float: "left", marginRight: "2rem" }}
           />
