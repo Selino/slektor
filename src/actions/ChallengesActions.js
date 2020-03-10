@@ -2,8 +2,8 @@ export const createChallenge = ({
   id = "",
   bookID = "",
   amount = 0,
-  createDate = 0,
-  expirationDate = 0,
+  startDate = 0,
+  endDate = 0,
   reader = "",
   owner = ""
 } = {}) => ({
@@ -14,8 +14,8 @@ export const createChallenge = ({
     reader,
     bookID,
     amount,
-    createDate,
-    expirationDate
+    startDate,
+    endDate
   }
 })
 
