@@ -64,7 +64,7 @@ const getSampleData = {
     sortBy: "date",
     startDate: null,
     endDate: null,
-    text: "Hobbit"
+    text: ""
   },
   challenges: [
     {

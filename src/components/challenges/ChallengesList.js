@@ -6,10 +6,6 @@ import { getVisibleItems } from "../../utilities/Utils"
 import ChallengeListFilters from "./ChallengeListFilters"
 
 function ChallengesList(props) {
-  // const challengeItems = props.challenges.map(challenge => (
-  //   <ChallengeListItem key={challenge.bookID} props={challenge} />
-  // ))
-
   return (
     <div>
       <h3>Challenges List</h3>
