@@ -1,10 +1,12 @@
 import React from "react"
-import { Card, Badge, Image } from "react-bootstrap"
+import { Card, Badge, Image, Button } from "react-bootstrap"
 import { loremIpsum } from "react-lorem-ipsum"
 import Dinero from "dinero.js"
 import Moment from "react-moment"
+import { removeChallenge } from "../../actions/ChallengesActions"
+import { connect } from "react-redux"
 
-export default function ChallengeListItem(props) {
+const ChallengeListItem = props => {
   const {
     id,
     amount,
@@ -12,7 +14,8 @@ export default function ChallengeListItem(props) {
     owner,
     startDate,
     endDate,
-    bookThumbnail
+    bookThumbnail,
+    dispatch
   } = props
   return (
     <Card key={id} style={{ marginBottom: "2rem" }}>
@@ -52,7 +55,19 @@ export default function ChallengeListItem(props) {
           />
           {loremIpsum()}
         </Card.Text>
+        <Button
+          variant='danger'
+          size='sm'
+          onClick={() => {
+            console.log(id)
+            dispatch(removeChallenge({ id }))
+          }}
+        >
+          Delete
+        </Button>
       </Card.Body>
     </Card>
   )
 }
+
+export default connect()(ChallengeListItem)

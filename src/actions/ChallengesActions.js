@@ -1,18 +1,24 @@
 export const createChallenge = ({
   id = "",
+  owner = "",
+  reader = "",
+  status = "",
   bookID = "",
+  bookTitle = "",
+  bookThumbnail = "",
   amount = 0,
   startDate = 0,
-  endDate = 0,
-  reader = "",
-  owner = ""
+  endDate = 0
 } = {}) => ({
   type: "CREATE_CHALLENGE",
   challenge: {
     id,
     owner,
     reader,
+    status,
     bookID,
+    bookTitle,
+    bookThumbnail,
     amount,
     startDate,
     endDate
