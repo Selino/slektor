@@ -1,5 +1,11 @@
 import React from "react"
+import ChallengeForm from "./ChallengeForm"
 
 export default function CreateChalleneg() {
-  return <div>Create Challenge</div>
+  return (
+    <div>
+      <h3>Create Challenge</h3>
+      <ChallengeForm />
+    </div>
+  )
 }

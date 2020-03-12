@@ -31,7 +31,7 @@ export default function globalNav() {
             </Nav.Item>
             <Nav.Item>
               <LinkContainer to='/create'>
-                <Nav.Link>Create Challenge</Nav.Link>
+                <Nav.Link>Create</Nav.Link>
               </LinkContainer>
             </Nav.Item>
             <Nav.Item>

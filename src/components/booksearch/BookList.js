@@ -20,7 +20,12 @@ function BookList(props) {
     </Card>
   ))
 
-  return <div>{bookItems}</div>
+  return (
+    <div>
+      <h3>Book List</h3>
+      {bookItems}
+    </div>
+  )
 }
 const mapStateToProps = state => {
   return {
