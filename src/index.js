@@ -1,7 +1,6 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import "./index.css"
-import App from "./App"
 import * as serviceWorker from "./serviceWorker"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Provider } from "react-redux"
@@ -10,6 +9,7 @@ import configureStore from "./store/configureStore"
 import { createChallenge } from "./actions/ChallengesActions"
 import { v4 as uuidv4 } from "uuid"
 import "moment-timezone"
+import AppRouter from "./routers/AppRouter"
 
 const store = configureStore()
 
@@ -35,7 +35,7 @@ store.dispatch(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <AppRouter />
   </Provider>,
   document.getElementById("root")
 )
