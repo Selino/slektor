@@ -5,7 +5,11 @@ export default function CreateChalleneg() {
   return (
     <div>
       <h3>Create Challenge</h3>
-      <ChallengeForm />
+      <ChallengeForm
+        onSubmit={challenge => {
+          console.log(challenge)
+        }}
+      />
     </div>
   )
 }

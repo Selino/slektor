@@ -4,7 +4,8 @@ import {
   FormLabel,
   Button,
   InputGroup,
-  FormControl
+  FormControl,
+  Alert
 } from "react-bootstrap"
 import { v4 as uuidv4 } from "uuid"
 import moment from "moment"
@@ -12,7 +13,7 @@ import "react-dates/initialize"
 import { SingleDatePicker } from "react-dates"
 import "react-dates/lib/css/_datepicker.css"
 
-function ChallengeForm() {
+function ChallengeForm(props) {
   const [state, setState] = useState({
     bookTitle: "Book Title Gets Passed Into Here Book",
     amount: 5,
@@ -21,6 +22,7 @@ function ChallengeForm() {
   const [readers] = useState(["Tomy", "Dick", "Jane"])
   const [calendarFocus, setCalendarFocus] = useState(false)
   const [myDate, setMyDate] = useState(moment())
+  const [error, setError] = useState("")
 
   const onAmountChange = e => {
     const amount = e.target.value
@@ -38,20 +40,34 @@ function ChallengeForm() {
   })
 
   const onDateChange = date => {
-    setMyDate(date)
+    if (date) {
+      setMyDate(date)
+    }
   }
 
   const onFocusChange = ({ focused }) => {
     setCalendarFocus(focused)
   }
 
-  const handleSubmit = () => {
-    console.log(state)
+  const handleSubmit = e => {
+    e.preventDefault()
+    if (state.amount === "" || state.amount < 1) {
+      setError("Amount cannot be empty!")
+    } else {
+      setError("")
+      props.onSubmit({
+        amount: state.amount,
+        bookId: state.bookId,
+        bookTitle: state.bookTitle
+      })
+    }
   }
 
   return (
     <div>
-      <Form>
+      {error && <Alert variant='danger'>{error}</Alert>}
+
+      <Form onSubmit={handleSubmit}>
         <Form.Group controlId='formBasicTitle'>
           <Form.Control
             onChange={e => (state.bookTitle = e.target.value)}
@@ -96,24 +112,10 @@ function ChallengeForm() {
           />
         </Form.Group>
 
-        <Button onClick={handleSubmit}>Create Challenge</Button>
+        <Button type='submit'>Create Challenge</Button>
       </Form>
     </div>
   )
 }
 
 export default ChallengeForm
-
-// <Form.Group controlId='formBasicReader'>
-// <FormLabel>Reader</FormLabel>
-// <Form.Control as='select'>
-//   <option>1</option>
-//   <option>2</option>
-//   <option>3</option>
-// </Form.Control>
-// </Form.Group>
-
-// <Form.Group controlId='formBasicNote'>
-// <Form.Label>Example textarea</Form.Label>
-// <Form.Control as='textarea' rows='3' />
-// </Form.Group>
