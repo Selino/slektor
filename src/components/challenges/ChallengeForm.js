@@ -83,7 +83,9 @@ function ChallengeForm() {
         </Form.Group>
 
         <Form.Group controlId='exampleForm.ControlSelect1'>
-          <FormLabel>Select end date</FormLabel>
+          <FormLabel style={{ marginRight: ".5rem" }}>
+            Select end date
+          </FormLabel>
           <SingleDatePicker
             date={myDate}
             onDateChange={onDateChange}
