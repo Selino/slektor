@@ -91,7 +91,6 @@ function ChallengeForm() {
             onFocusChange={onFocusChange}
             id='2'
             numberOfMonths={1}
-            isOutsideRange={() => false}
           />
         </Form.Group>
 
