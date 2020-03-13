@@ -16,10 +16,10 @@ function ChallengeForm() {
   const [state, setState] = useState({
     bookTitle: "Book Title Gets Passed Into Here Book",
     amount: 5,
-    bookId: uuidv4(),
-    calendarFocused: false
+    bookId: uuidv4()
   })
   const [readers] = useState(["Tomy", "Dick", "Jane"])
+  const [calendarFocus, setCalendarFocus] = useState(false)
   const [myDate, setMyDate] = useState(moment())
 
   const onAmountChange = e => {
@@ -42,7 +42,7 @@ function ChallengeForm() {
   }
 
   const onFocusChange = ({ focused }) => {
-    setState(() => ({ ...state, calendarFocused: focused }))
+    setCalendarFocus(focused)
   }
 
   const handleSubmit = () => {
@@ -87,7 +87,7 @@ function ChallengeForm() {
           <SingleDatePicker
             date={myDate}
             onDateChange={onDateChange}
-            focused={state.calendarFocused}
+            focused={calendarFocus}
             onFocusChange={onFocusChange}
             id='2'
             numberOfMonths={1}
