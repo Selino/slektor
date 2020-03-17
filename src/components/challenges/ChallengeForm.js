@@ -7,7 +7,7 @@ import {
   FormControl,
   Alert
 } from "react-bootstrap"
-import uuid, { v4 as uuidv4 } from "uuid"
+import { v4 as uuidv4 } from "uuid"
 import moment from "moment"
 import "react-dates/initialize"
 import { SingleDatePicker } from "react-dates"

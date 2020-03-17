@@ -13,8 +13,7 @@ const ChallengeListItem = props => {
     reader,
     startDate,
     endDate,
-    bookThumbnail,
-    dispatch
+    bookThumbnail
   } = props
   return (
     <Card key={id} style={{ marginBottom: "2rem" }}>
