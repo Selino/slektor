@@ -6,6 +6,7 @@ import HelpPage from "../components/HelpPage"
 import NotFoundPage from "../components/NotFoundPage.js"
 import GlobalNav from "../components/nav/GlobalNav"
 import ChallengesList from "../components/challenges/ChallengesList"
+import EditChallenge from "../components/challenges/EditChallenge"
 import "../App.css"
 
 const AppRouter = () => (
@@ -17,6 +18,7 @@ const AppRouter = () => (
           <Route path='/' component={BookList} exact={true} />
           <Route path='/booklist' component={BookList} />
           <Route path='/challenges' component={ChallengesList} />
+          <Route path='/edit/:id' component={EditChallenge} />
           <Route path='/create' component={CreateChallenge} />
           <Route path='/help' component={HelpPage} />
           <Route component={NotFoundPage} />

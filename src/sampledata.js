@@ -77,8 +77,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 500,
-      startDate: 1583456461,
-      endDate: 1583787795
+      startDate: 1583326800000,
+      endDate: 1588338000000
     },
     {
       id: "2",
@@ -90,8 +90,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 300,
-      startDate: 1581022995,
-      endDate: 1583524442
+      startDate: 1580562000000,
+      endDate: 1585746000000
     },
     {
       id: "3",
@@ -103,8 +103,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 1500,
-      startDate: 1583185852,
-      endDate: 1585864252
+      startDate: 1583067600000,
+      endDate: 1586955600000
     }
   ],
   items: [

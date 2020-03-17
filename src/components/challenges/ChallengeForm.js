@@ -7,7 +7,7 @@ import {
   FormControl,
   Alert
 } from "react-bootstrap"
-import { v4 as uuidv4 } from "uuid"
+import uuid, { v4 as uuidv4 } from "uuid"
 import moment from "moment"
 import "react-dates/initialize"
 import { SingleDatePicker } from "react-dates"
@@ -15,13 +15,18 @@ import "react-dates/lib/css/_datepicker.css"
 
 function ChallengeForm(props) {
   const [state, setState] = useState({
-    bookTitle: "Book Title Gets Passed Into Here Book",
-    amount: 5,
-    bookId: uuidv4()
+    bookTitle: props.challenge ? props.challenge.bookTitle : "Book Goes Here ",
+    amount: props.challenge ? props.challenge.amount / 100 : 1,
+    bookId: props.challenge ? props.challenge.bookId : uuidv4(),
+    reader: props.challenge ? props.challenge.reader : "",
+    startDate: props.challenge ? props.challenge.startDate : moment(),
+    endDate: props.challenge ? moment(props.challenge.endDate) : moment(30)
   })
-  const [readers] = useState(["Tomy", "Dick", "Jane"])
+
+  const [readers] = useState(["Tommy", "Dick", "Jane"])
   const [calendarFocus, setCalendarFocus] = useState(false)
-  const [myDate, setMyDate] = useState(moment())
+
+  // const [myDate, setMyDate] = useState(moment())
   const [error, setError] = useState("")
 
   const onAmountChange = e => {
@@ -31,17 +36,16 @@ function ChallengeForm(props) {
     }
   }
 
-  const readersSelectItems = readers.map(reader => {
-    return (
-      <option key={reader} value={reader}>
-        {reader}
-      </option>
-    )
-  })
+  const onReaderChange = e => {
+    const reader = e.target.value
+    if (reader) {
+      setState({ ...state, reader })
+    }
+  }
 
-  const onDateChange = date => {
-    if (date) {
-      setMyDate(date)
+  const onDateChange = endDate => {
+    if (endDate) {
+      setState({ ...state, endDate })
     }
   }
 
@@ -56,12 +60,24 @@ function ChallengeForm(props) {
     } else {
       setError("")
       props.onSubmit({
-        amount: state.amount,
+        owner: "current user",
+        reader: state.reader,
+        amount: state.amount * 100,
         bookId: state.bookId,
-        bookTitle: state.bookTitle
+        bookTitle: state.bookTitle,
+        startDate: state.startDate,
+        endDate: state.endDate.valueOf()
       })
     }
   }
+
+  const readersSelectItems = readers.map(r => {
+    return (
+      <option key={r} value={r}>
+        {r}
+      </option>
+    )
+  })
 
   return (
     <div>
@@ -95,7 +111,13 @@ function ChallengeForm(props) {
         </InputGroup>
         <Form.Group controlId='exampleForm.ControlSelect1'>
           <FormLabel>Select reader</FormLabel>
-          <Form.Control as='select'>{readersSelectItems}</Form.Control>
+          <Form.Control
+            value={state.reader}
+            onChange={onReaderChange}
+            as='select'
+          >
+            {readersSelectItems}
+          </Form.Control>
         </Form.Group>
 
         <Form.Group controlId='exampleForm.ControlSelect1'>
@@ -103,7 +125,7 @@ function ChallengeForm(props) {
             Select end date
           </FormLabel>
           <SingleDatePicker
-            date={myDate}
+            date={state.endDate}
             onDateChange={onDateChange}
             focused={calendarFocus}
             onFocusChange={onFocusChange}
@@ -112,7 +134,7 @@ function ChallengeForm(props) {
           />
         </Form.Group>
 
-        <Button type='submit'>Create Challenge</Button>
+        <Button type='submit'>Save Challenge</Button>
       </Form>
     </div>
   )

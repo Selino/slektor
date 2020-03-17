@@ -2,16 +2,17 @@ import React from "react"
 import { Card, Badge, Image, Button } from "react-bootstrap"
 import { loremIpsum } from "react-lorem-ipsum"
 import Dinero from "dinero.js"
-import Moment from "react-moment"
+import moment from "moment"
 import { removeChallenge } from "../../actions/ChallengesActions"
 import { connect } from "react-redux"
+import { Link } from "react-router-dom"
 
 const ChallengeListItem = props => {
   const {
     id,
     amount,
     bookTitle,
-    owner,
+    reader,
     startDate,
     endDate,
     bookThumbnail,
@@ -31,21 +32,13 @@ const ChallengeListItem = props => {
           {bookTitle}
         </Card.Title>
         <div style={{ marginBottom: "1rem" }}>
-          Challenger : <strong>{owner}</strong>
+          Reader : <strong>{reader}</strong>
           <br />
           Created : &nbsp;
-          <strong>
-            <Moment unix format='LL'>
-              {startDate}
-            </Moment>
-          </strong>
+          <strong>{moment(startDate).format("MMMM Do YYYY")}</strong>
           <br />
           Ends : &nbsp;
-          <strong>
-            <Moment unix format='LL'>
-              {endDate}
-            </Moment>
-          </strong>
+          <strong>{moment(endDate).format("MMMM Do YYYY")}</strong>
         </div>
         <Card.Text>
           <Image
@@ -56,6 +49,7 @@ const ChallengeListItem = props => {
           {loremIpsum()}
         </Card.Text>
         <Button
+          style={{ marginRight: ".5rem" }}
           variant='danger'
           size='sm'
           onClick={() => {
@@ -65,6 +59,11 @@ const ChallengeListItem = props => {
         >
           Delete
         </Button>
+        <Link to={`/edit/${id}`}>
+          <Button variant='secondary' size='sm'>
+            Edit
+          </Button>
+        </Link>
       </Card.Body>
     </Card>
   )

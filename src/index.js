@@ -28,8 +28,8 @@ store.dispatch(
     bookThumbnail:
       "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
     amount: 200,
-    startDate: 1583961742,
-    endDate: 1586640142
+    startDate: 1584470612000,
+    endDate: 1585593812000
   })
 )
 
