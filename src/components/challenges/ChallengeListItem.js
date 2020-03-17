@@ -3,8 +3,6 @@ import { Card, Badge, Image, Button } from "react-bootstrap"
 import { loremIpsum } from "react-lorem-ipsum"
 import Dinero from "dinero.js"
 import moment from "moment"
-import { removeChallenge } from "../../actions/ChallengesActions"
-import { connect } from "react-redux"
 import { Link } from "react-router-dom"
 
 const ChallengeListItem = props => {
@@ -48,19 +46,8 @@ const ChallengeListItem = props => {
           />
           {loremIpsum()}
         </Card.Text>
-        <Button
-          style={{ marginRight: ".5rem" }}
-          variant='danger'
-          size='sm'
-          onClick={() => {
-            console.log(id)
-            dispatch(removeChallenge({ id }))
-          }}
-        >
-          Delete
-        </Button>
         <Link to={`/edit/${id}`}>
-          <Button variant='secondary' size='sm'>
+          <Button variant='secondary' size='' style={{ width: "100%" }}>
             Edit
           </Button>
         </Link>
@@ -69,4 +56,4 @@ const ChallengeListItem = props => {
   )
 }
 
-export default connect()(ChallengeListItem)
+export default ChallengeListItem

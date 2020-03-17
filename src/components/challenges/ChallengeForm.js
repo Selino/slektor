@@ -134,7 +134,7 @@ function ChallengeForm(props) {
           />
         </Form.Group>
 
-        <Button type='submit'>Save Challenge</Button>
+        <Button type='submit'>Save</Button>
       </Form>
     </div>
   )
