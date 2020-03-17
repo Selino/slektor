@@ -22,6 +22,7 @@ const EditChallenge = props => {
         size='sm'
         onClick={() => {
           props.dispatch(removeChallenge({ id: props.challenge.id }))
+          props.history.push("/challenges")
         }}
       >
         Delete
