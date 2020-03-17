@@ -9,8 +9,7 @@ export default () => {
       challenges: challengesReducer,
       books: booksReducer,
       filters: filtersReducer
-    }),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    })
   )
   return store
 }
