@@ -3,13 +3,25 @@ import { connect } from "react-redux"
 import {
   setTextFilter,
   sortByDate,
-  sortByAmount
+  sortByAmount,
+  setStartDate,
+  setEndDate
 } from "../../actions/FiltersActions"
+import { DateRangePicker } from "react-dates"
 
 const ChallengeListFilters = props => {
   const [state, setState] = useState({
-    calendarFocus: null
+    calendarFocused: null
   })
+
+  const onDatesChange = ({ startDate, endDate }) => {
+    props.dispatch(setStartDate(startDate))
+    props.dispatch(setEndDate(endDate))
+  }
+
+  const onFocusChange = calendarFocused => {
+    setState(() => ({ calendarFocused }))
+  }
 
   return (
     <div style={{ marginBottom: ".5rem" }}>
@@ -34,13 +46,23 @@ const ChallengeListFilters = props => {
         style={{
           verticalAlign: "middle",
           width: "8rem",
-          marginLeft: ".5rem"
+          margin: ".5rem"
         }}
         className='browser-default custom-select'
       >
         <option value='date'>Date</option>
         <option value='amount'>Amount</option>
       </select>
+      <DateRangePicker
+        startDate={props.filters.startDate}
+        endDate={props.filters.endDate}
+        onDatesChange={onDatesChange}
+        focusedInput={state.calendarFocused}
+        onFocusChange={onFocusChange}
+        numberOfMonths={1}
+        isOutsideRange={() => false}
+        showClearDates={true}
+      />
     </div>
   )
 }

@@ -31,7 +31,7 @@ const ChallengeListItem = props => {
         <div style={{ marginBottom: "1rem" }}>
           Reader : <strong>{reader}</strong>
           <br />
-          Created : &nbsp;
+          Starts : &nbsp;
           <strong>{moment(startDate).format("MMMM Do YYYY")}</strong>
           <br />
           Ends : &nbsp;

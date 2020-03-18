@@ -1,4 +1,5 @@
 import simulatedSearchData from "../sampledata"
+import moment from "moment"
 
 export const simulateSearch = string => {
   return simulatedSearchData.items
@@ -7,10 +8,14 @@ export const simulateSearch = string => {
 export const getVisibleItems = (item, { sortBy, startDate, endDate, text }) => {
   return item
     .filter(item => {
-      const startDateMatch =
-        typeof startDate !== "number" || item.createdAt >= startDate
-      const endDateMatch =
-        typeof endDate !== "number" || item.createdAt <= endDate
+      const startDateMoment = moment(item.startDate)
+      const endDateMoment = moment(item.endDate)
+      const startDateMatch = startDate
+        ? startDate.isSameOrBefore(startDateMoment, "day")
+        : true
+      const endDateMatch = endDate
+        ? endDate.isSameOrAfter(endDateMoment, "day")
+        : true
       const textMatch = item.bookTitle
         .toLowerCase()
         .includes(text.toLowerCase())
