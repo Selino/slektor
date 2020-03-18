@@ -16,7 +16,6 @@ export const getVisibleItems = (item, { sortBy, startDate, endDate, text }) => {
       const endDateMatch = endDate
         ? endDate.isSameOrAfter(endDateMoment, "day")
         : true
-      typeof endDate !== "number" || item.createdAt <= endDate
       const textMatch = item.bookTitle
         .toLowerCase()
         .includes(text.toLowerCase())
