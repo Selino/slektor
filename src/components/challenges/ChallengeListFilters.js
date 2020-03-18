@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { connect } from "react-redux"
 import {
   setTextFilter,
@@ -7,11 +7,15 @@ import {
 } from "../../actions/FiltersActions"
 
 const ChallengeListFilters = props => {
+  const [state, setState] = useState({
+    calendarFocus: null
+  })
+
   return (
     <div style={{ marginBottom: ".5rem" }}>
       <input
         style={{ verticalAlign: "middle", padding: ".25rem" }}
-        placeholder='Search by title'
+        placeholder='Filter by title'
         type='text'
         value={props.filters.text}
         onChange={e => {

@@ -46,8 +46,8 @@ const ChallengeListItem = props => {
           {loremIpsum()}
         </Card.Text>
 
-        <div class='row'>
-          <div class='col-md-3 col-lg-2'>
+        <div className='row'>
+          <div className='col-md-3 col-lg-2'>
             <Link to={`/edit/${id}`}>
               <Button block variant='secondary'>
                 Edit

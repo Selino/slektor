@@ -1,3 +1,6 @@
+import moment from "moment"
+
+// Google Books API
 // https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4
 
 export const simulatedSearchData = {
@@ -62,8 +65,8 @@ export const simulatedSearchData = {
 const getSampleData = {
   filters: {
     sortBy: "date",
-    startDate: null,
-    endDate: null,
+    startDate: moment().startOf("month"),
+    endDate: moment().endOf("month"),
     text: ""
   },
   challenges: [
@@ -77,8 +80,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 500,
-      startDate: 1583326800000,
-      endDate: 1588338000000
+      startDate: moment(1583326800000),
+      endDate: moment(1588338000000)
     },
     {
       id: "2",
@@ -90,8 +93,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 300,
-      startDate: 1580562000000,
-      endDate: 1585746000000
+      startDate: moment(1580562000000),
+      endDate: moment(1585746000000)
     },
     {
       id: "3",
@@ -103,8 +106,8 @@ const getSampleData = {
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 1500,
-      startDate: 1583067600000,
-      endDate: 1586955600000
+      startDate: moment(1583067600000),
+      endDate: moment(1586955600000)
     }
   ],
   items: [
