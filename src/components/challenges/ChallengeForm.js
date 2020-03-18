@@ -20,7 +20,9 @@ function ChallengeForm(props) {
     bookId: props.challenge ? props.challenge.bookId : uuidv4(),
     reader: props.challenge ? props.challenge.reader : "",
     startDate: props.challenge ? props.challenge.startDate : moment(),
-    endDate: props.challenge ? moment(props.challenge.endDate) : moment(30)
+    endDate: props.challenge
+      ? moment(props.challenge.endDate)
+      : moment().endOf("month")
   })
 
   const [readers] = useState(["Tommy", "Dick", "Jane"])
