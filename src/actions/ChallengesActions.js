@@ -1,14 +1,17 @@
+import { v4 as uuidv4 } from "uuid"
+import moment from "moment"
+
 export const createChallenge = ({
-  id = "",
+  id = uuidv4(),
   owner = "",
   reader = "",
-  status = "running",
+  status = "",
   bookID = "",
   bookTitle = "",
   bookThumbnail = "",
   amount = 0,
-  startDate = 0,
-  endDate = 0
+  startDate = moment(),
+  endDate = moment().endOf("month")
 } = {}) => ({
   type: "CREATE_CHALLENGE",
   challenge: {
