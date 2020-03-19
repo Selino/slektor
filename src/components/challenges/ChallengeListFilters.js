@@ -6,7 +6,7 @@ import {
   sortByAmount,
   setStartDate,
   setEndDate
-} from "../../actions/FiltersActions"
+} from "../../actions/filtersactions"
 import { DateRangePicker } from "react-dates"
 
 const ChallengeListFilters = props => {

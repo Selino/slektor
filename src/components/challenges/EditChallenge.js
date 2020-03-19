@@ -1,9 +1,11 @@
 import React from "react"
 import ChallengeForm from "./ChallengeForm"
 import { connect } from "react-redux"
-import { updateChallenge } from "../../actions/ChallengesActions"
+import {
+  updateChallenge,
+  removeChallenge
+} from "../../actions/challengesactions"
 import { Button } from "react-bootstrap"
-import { removeChallenge } from "../../actions/ChallengesActions"
 
 const EditChallenge = props => {
   return (

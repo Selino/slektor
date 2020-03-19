@@ -2,7 +2,7 @@ import {
   createChallenge,
   removeChallenge,
   updateChallenge
-} from "../../actions/ChallengesActions"
+} from "../../actions/challengesactions"
 import moment from "moment"
 
 test("should setup remove challenge action object", () => {

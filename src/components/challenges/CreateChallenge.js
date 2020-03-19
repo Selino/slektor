@@ -1,7 +1,7 @@
 import React from "react"
 import ChallengeForm from "./ChallengeForm"
 import { connect } from "react-redux"
-import { createChallenge } from "../../actions/ChallengesActions"
+import { createChallenge } from "../../actions/challengesactions"
 
 const CreateChallenge = props => {
   return (
