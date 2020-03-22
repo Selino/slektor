@@ -7,7 +7,7 @@ import NotFoundPage from "../components/NotFoundPage.js"
 import GlobalNav from "../components/nav/GlobalNav"
 import ChallengesList from "../components/challenges/ChallengesList"
 import EditChallenge from "../components/challenges/EditChallenge"
-import "../App.css"
+import "../App.sass"
 
 const AppRouter = () => (
   <BrowserRouter>
@@ -29,5 +29,3 @@ const AppRouter = () => (
 )
 
 export default AppRouter
-
-// <Route path='/edit/:id' component={EditChallenge} />
