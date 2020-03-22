@@ -11,10 +11,8 @@ export default function globalNav() {
           <img
             alt='Slektor App Logo'
             src={logo}
-            width='30'
-            height='30'
-            className='d-inline-block align-top'
-          />{" "}
+            className='d-inline-block App-logo'
+          />
           Slektor App
         </Navbar.Brand>
         <Navbar.Collapse id='basic-navbar-nav'>
