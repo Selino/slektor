@@ -1,11 +1,5 @@
 import React from "react"
 import { Button } from "react-bootstrap"
-// import { useDispatch } from "react-redux"
-// import { v4 as uuidv4 } from "uuid"
-// import { createChallenge } from "../../actions/challengesactions"
-// import { makeDate, makeExpirationDate } from "../../utilities/Utils"
-// import { sortBooksByAuthor } from "../../actions/filtersactions"
-
 export default function BookSearchForm(props) {
   const handleSubmit = e => {
     e.preventDefault()
@@ -29,5 +23,3 @@ export default function BookSearchForm(props) {
     </form>
   )
 }
-
-// store.dispatch(sortChallengesByDateSpecified(123))
