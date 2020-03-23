@@ -62,6 +62,8 @@ const ChallengeListFilters = props => {
         numberOfMonths={1}
         isOutsideRange={() => false}
         showClearDates={true}
+        startDateId='1'
+        endDateId='2'
       />
     </div>
   )
