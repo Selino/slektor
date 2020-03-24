@@ -23,8 +23,7 @@ test("should return default challenges", () => {
   expect(state[0].amount).toBeGreaterThanOrEqual(100)
 })
 
-//state data
-const currentState = [
+const currentStateData = [
   {
     id: "1",
     owner: "John Doe",
@@ -80,7 +79,7 @@ test("should create a new 4th challenge", () => {
     startDate: moment(0),
     endDate: moment(30)
   }
-  const state = challengesReducer(currentState, {
+  const state = challengesReducer(currentStateData, {
     type: "CREATE_CHALLENGE",
     challenge: newChallengeData
   })
@@ -90,7 +89,7 @@ test("should create a new 4th challenge", () => {
 
 test("should update the second challenge to show amount = 1500", () => {
   const amountChange = { amount: 1500 }
-  const state = challengesReducer(currentState, {
+  const state = challengesReducer(currentStateData, {
     type: "UPDATE_CHALLENGE",
     challenge: { id: "2", updates: amountChange }
   })
@@ -98,7 +97,7 @@ test("should update the second challenge to show amount = 1500", () => {
 })
 
 test("should remove second challenge from state", () => {
-  const state = challengesReducer(currentState, {
+  const state = challengesReducer(currentStateData, {
     type: "REMOVE_CHALLENGE",
     challenge: { id: "2" }
   })
