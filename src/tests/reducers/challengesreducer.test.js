@@ -29,7 +29,7 @@ const currentStateData = [
     owner: "John Doe",
     reader: "Steve Jang",
     status: "running",
-    bookID: "xIItr7-StUEC",
+    bookID: uuidv4(),
     bookTitle: "The Hobbit",
     bookThumbnail:
       "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
@@ -42,7 +42,7 @@ const currentStateData = [
     owner: "Steve Jang",
     reader: "Jane Wilder",
     status: "running",
-    bookID: "H8ON-dTgQQYC",
+    bookID: uuidv4(),
     bookTitle: "Kama Pootra",
     bookThumbnail:
       "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
@@ -55,7 +55,7 @@ const currentStateData = [
     owner: "Carol Johnson",
     reader: "Mike Butt",
     status: "running",
-    bookID: "H8ON-dTgQQYC",
+    bookID: uuidv4(),
     bookTitle: "The Hobbit, Or, There and Back Again",
     bookThumbnail:
       "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
