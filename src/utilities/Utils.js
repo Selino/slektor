@@ -1,8 +1,8 @@
-import simulatedSearchData from "../sampledata"
+import { simulatedSearchData } from "../sampledata"
 import moment from "moment"
 
-export const simulateSearch = string => {
-  return simulatedSearchData.items
+export const simulateSearch = () => {
+  return simulatedSearchData()
 }
 
 export const getVisibleItems = (item, { sortBy, startDate, endDate, text }) => {

@@ -3,7 +3,7 @@ import moment from "moment"
 // Google Books API
 // https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4
 
-export const simulatedSearchData = {
+export const simulatedSearchData = () => ({
   items: [
     {
       id: "LHTexEiizN4C",
@@ -36,33 +36,11 @@ export const simulatedSearchData = {
             "http://books.google.com/books/content?id=I8YWAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
         }
       }
-    },
-    {
-      id: "KnLpwAEACAAJ",
-      volumeInfo: {
-        title: "Where's the Poop?",
-        authors: ["Julie Markes"],
-        imageLinks: {
-          smallThumbnail:
-            "http://books.google.com/books/content?id=KnLpwAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-        }
-      }
-    },
-    {
-      id: "x1RxVwq45cEC",
-      volumeInfo: {
-        title: "Kama Pootra",
-        authors: ["Daniel Cole Young"],
-        imageLinks: {
-          smallThumbnail:
-            "http://books.google.com/books/content?id=x1RxVwq45cEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
     }
   ]
-}
+})
 
-const getSampleData = {
+const getSampleData = () => ({
   filters: {
     sortBy: "date",
     startDate: moment().startOf("month"),
@@ -167,6 +145,6 @@ const getSampleData = {
       }
     }
   ]
-}
+})
 
 export default getSampleData

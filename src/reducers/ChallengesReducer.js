@@ -1,6 +1,6 @@
 import getSampleData from "../sampledata"
 
-const challengesReducerDefault = getSampleData.challenges
+const challengesReducerDefault = getSampleData().challenges
 export default (state = challengesReducerDefault, action) => {
   switch (action.type) {
     case "CREATE_CHALLENGE":

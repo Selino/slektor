@@ -1,6 +1,6 @@
 import getSampleData from "../sampledata"
 
-const filtersReducerDefaultState = getSampleData.filters
+const filtersReducerDefaultState = getSampleData().filters
 export default (state = filtersReducerDefaultState, action) => {
   switch (action.type) {
     case "SET_TEXT_FILTER":
