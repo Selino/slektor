@@ -1,4 +1,4 @@
-import getSampleData from "../sampledata"
+import { getSampleData } from "../sampledata"
 
 const challengesReducerDefault = getSampleData().challenges
 export default (state = challengesReducerDefault, action) => {

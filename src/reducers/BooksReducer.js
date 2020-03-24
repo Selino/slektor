@@ -1,4 +1,4 @@
-import getSampleData from "../sampledata"
+import { getSampleData } from "../sampledata"
 
 const booksReducerDefault = getSampleData().items
 export default (state = booksReducerDefault, action) => {

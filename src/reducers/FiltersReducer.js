@@ -1,4 +1,4 @@
-import getSampleData from "../sampledata"
+import { getSampleData } from "../sampledata"
 
 const filtersReducerDefaultState = getSampleData().filters
 export default (state = filtersReducerDefaultState, action) => {
