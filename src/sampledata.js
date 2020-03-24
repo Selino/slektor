@@ -40,7 +40,7 @@ export const simulatedSearchData = () => ({
   ]
 })
 
-const getSampleData = () => ({
+export const getSampleData = () => ({
   filters: {
     sortBy: "date",
     startDate: moment().startOf("month"),
@@ -67,7 +67,7 @@ const getSampleData = () => ({
       reader: "Jane Wilder",
       status: "running",
       bookID: "H8ON-dTgQQYC",
-      bookTitle: "Kama Pootra ",
+      bookTitle: "Kama Pootra",
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 300,
@@ -77,10 +77,10 @@ const getSampleData = () => ({
     {
       id: "3",
       owner: "Carol Johnson",
-      reader: "Mie Butt",
+      reader: "Mike Butt",
       status: "running",
       bookID: "H8ON-dTgQQYC",
-      bookTitle: "The Hobbit, Or, There and Back Again ",
+      bookTitle: "The Hobbit, Or, There and Back Again",
       bookThumbnail:
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 1500,
@@ -146,5 +146,3 @@ const getSampleData = () => ({
     }
   ]
 })
-
-export default getSampleData
