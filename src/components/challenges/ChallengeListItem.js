@@ -1,6 +1,5 @@
 import React from "react"
 import { Card, Badge, Image, Button } from "react-bootstrap"
-import { loremIpsum } from "react-lorem-ipsum"
 import Dinero from "dinero.js"
 import moment from "moment"
 import { Link } from "react-router-dom"
@@ -43,7 +42,12 @@ const ChallengeListItem = props => {
             src={bookThumbnail}
             style={{ float: "left", marginRight: "2rem" }}
           />
-          {loremIpsum()}
+          Etiam sagittis id diam ac rhoncus. Suspendisse ut rhoncus enim. Morbi
+          vehicula sodales nibh quis mattis. Vestibulum et justo vitae odio
+          aliquam suscipit eget eget ipsum. Cras facilisis leo nec sapien
+          cursus, id condimentum elit dignissim. Maecenas finibus sed justo quis
+          varius. Phasellus finibus arcu a velit pellentesque, pellentesque
+          maximus lectus facilisis. Sed eu hendrerit risus.
         </Card.Text>
 
         <div className='row'>

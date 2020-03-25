@@ -1,9 +1,9 @@
 import React from "react"
 import { Nav, Navbar } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
+import logo from "../../logo.svg"
 
 export default function globalNav() {
-  const logo = "../../logo.svg"
   return (
     <header className='App-header'>
       <Navbar fixed='top' bg='dark' variant='dark'>

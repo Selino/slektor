@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a single challenge item 1`] = `
+<Card
+  body={false}
+  key="1"
+  style={
+    Object {
+      "marginBottom": "2rem",
+    }
+  }
+>
+  <CardBody>
+    <CardTitle>
+      <Badge
+        className="float-right"
+        pill={false}
+        variant="success"
+      >
+        Current Bid :
+         
+        $5.00
+      </Badge>
+      The Hobbit
+    </CardTitle>
+    <div
+      style={
+        Object {
+          "marginBottom": "1rem",
+        }
+      }
+    >
+      Reader : 
+      <strong>
+        Steve Jang
+      </strong>
+      <br />
+      Starts :  
+      <strong>
+        March 4th 2020
+      </strong>
+      <br />
+      Ends :  
+      <strong>
+        May 1st 2020
+      </strong>
+    </div>
+    <CardText>
+      <Image
+        fluid={false}
+        rounded={true}
+        roundedCircle={false}
+        src="http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        style={
+          Object {
+            "float": "left",
+            "marginRight": "2rem",
+          }
+        }
+        thumbnail={false}
+      />
+      Etiam sagittis id diam ac rhoncus. Suspendisse ut rhoncus enim. Morbi vehicula sodales nibh quis mattis. Vestibulum et justo vitae odio aliquam suscipit eget eget ipsum. Cras facilisis leo nec sapien cursus, id condimentum elit dignissim. Maecenas finibus sed justo quis varius. Phasellus finibus arcu a velit pellentesque, pellentesque maximus lectus facilisis. Sed eu hendrerit risus.
+    </CardText>
+    <div
+      className="row"
+    >
+      <div
+        className="col-md-3 col-lg-2"
+      >
+        <Link
+          to="/edit/1"
+        >
+          <Button
+            active={false}
+            block={true}
+            disabled={false}
+            type="button"
+            variant="secondary"
+          >
+            Edit
+          </Button>
+        </Link>
+      </div>
+    </div>
+  </CardBody>
+</Card>
+`;
