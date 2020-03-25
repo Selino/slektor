@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the BookList with books 1`] = `
+<div>
+  <h3>
+    Book List
+  </h3>
+  <Card
+    body={false}
+    key="pD6arNyKyi8C"
+    style={
+      Object {
+        "marginBottom": "1rem",
+      }
+    }
+  >
+    <CardBody>
+      <img
+        alt="The Hobbit"
+        src="http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        style={
+          Object {
+            "float": "left",
+            "margin": "0 1rem 1rem 0",
+          }
+        }
+      />
+      <h2>
+        The Hobbit
+      </h2>
+      <h4>
+        J.R.R. Tolkien
+      </h4>
+      <p />
+    </CardBody>
+  </Card>
+  <Card
+    body={false}
+    key="hFfhrCWiLSMC"
+    style={
+      Object {
+        "marginBottom": "1rem",
+      }
+    }
+  >
+    <CardBody>
+      <img
+        alt="The Hobbit, Or, There and Back Again"
+        src="http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        style={
+          Object {
+            "float": "left",
+            "margin": "0 1rem 1rem 0",
+          }
+        }
+      />
+      <h2>
+        The Hobbit, Or, There and Back Again
+      </h2>
+      <h4>
+        John Ronald Reuel Tolkien
+      </h4>
+      <p />
+    </CardBody>
+  </Card>
+  <Card
+    body={false}
+    key="H8ON-dTgQQYC"
+    style={
+      Object {
+        "marginBottom": "1rem",
+      }
+    }
+  >
+    <CardBody>
+      <img
+        alt="The Hobbit"
+        src="http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        style={
+          Object {
+            "float": "left",
+            "margin": "0 1rem 1rem 0",
+          }
+        }
+      />
+      <h2>
+        The Hobbit
+      </h2>
+      <h4>
+        Jude Fisher
+      </h4>
+      <p />
+    </CardBody>
+  </Card>
+  <Card
+    body={false}
+    key="KY0BDObXftUC"
+    style={
+      Object {
+        "marginBottom": "1rem",
+      }
+    }
+  >
+    <CardBody>
+      <img
+        alt="Exploring J.R.R. Tolkien's The Hobbit"
+        src="http://books.google.com/books/content?id=KY0BDObXftUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        style={
+          Object {
+            "float": "left",
+            "margin": "0 1rem 1rem 0",
+          }
+        }
+      />
+      <h2>
+        Exploring J.R.R. Tolkien's The Hobbit
+      </h2>
+      <h4>
+        Corey Olsen
+      </h4>
+      <p />
+    </CardBody>
+  </Card>
+  <Card
+    body={false}
+    key="N_0VhzQKIIAC"
+    style={
+      Object {
+        "marginBottom": "1rem",
+      }
+    }
+  >
+    <CardBody>
+      <img
+        alt="Finding God in the Hobbit"
+        src="http://books.google.com/books/content?id=N_0VhzQKIIAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+        style={
+          Object {
+            "float": "left",
+            "margin": "0 1rem 1rem 0",
+          }
+        }
+      />
+      <h2>
+        Finding God in the Hobbit
+      </h2>
+      <h4>
+        Jim Ware
+      </h4>
+      <p />
+    </CardBody>
+  </Card>
+</div>
+`;

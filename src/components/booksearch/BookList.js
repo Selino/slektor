@@ -2,7 +2,7 @@ import React from "react"
 import { Card } from "react-bootstrap"
 import { connect } from "react-redux"
 
-function BookList(props) {
+export const BookList = props => {
   const bookItems = props.books.map(book => (
     <Card key={book.id} style={{ marginBottom: "1rem" }}>
       <Card.Body>

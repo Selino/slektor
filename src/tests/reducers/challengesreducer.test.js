@@ -1,6 +1,9 @@
 import challengesReducer from "../../reducers/ChallengesReducer"
 import { v4 as uuidv4 } from "uuid"
 import moment from "moment"
+import currentStateData, {
+  newChallengeData
+} from "../fixtures/challengesFixture"
 
 test("should return default challenges", () => {
   const expectedChallenge = {
@@ -23,62 +26,7 @@ test("should return default challenges", () => {
   expect(state[0].amount).toBeGreaterThanOrEqual(100)
 })
 
-const currentStateData = [
-  {
-    id: "1",
-    owner: "John Doe",
-    reader: "Steve Jang",
-    status: "running",
-    bookID: uuidv4(),
-    bookTitle: "The Hobbit",
-    bookThumbnail:
-      "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-    amount: 500,
-    startDate: moment(1583326800000),
-    endDate: moment(1588338000000)
-  },
-  {
-    id: "2",
-    owner: "Steve Jang",
-    reader: "Jane Wilder",
-    status: "running",
-    bookID: uuidv4(),
-    bookTitle: "Kama Pootra",
-    bookThumbnail:
-      "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-    amount: 300,
-    startDate: moment(1580562000000),
-    endDate: moment(1585746000000)
-  },
-  {
-    id: "3",
-    owner: "Carol Johnson",
-    reader: "Mike Butt",
-    status: "running",
-    bookID: uuidv4(),
-    bookTitle: "The Hobbit, Or, There and Back Again",
-    bookThumbnail:
-      "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-    amount: 1500,
-    startDate: moment(1583067600000),
-    endDate: moment(1586955600000)
-  }
-]
-
 test("should create a new 4th challenge", () => {
-  const newChallengeData = {
-    id: "4",
-    owner: "Lenny Kravitz",
-    reader: "Butt McJones",
-    status: "running",
-    bookID: uuidv4(),
-    bookTitle: "The Road",
-    bookThumbnail:
-      "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-    amount: 200,
-    startDate: moment(0),
-    endDate: moment(30)
-  }
   const state = challengesReducer(currentStateData, {
     type: "CREATE_CHALLENGE",
     challenge: newChallengeData
