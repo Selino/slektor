@@ -1,4 +1,4 @@
-import { simulateSearch, getVisibleItems } from "../../utilities/Utils"
+import { simulateSearch, getVisibleItems } from "./Utils"
 import moment from "moment"
 
 test("should return sample data with a book list", () => {

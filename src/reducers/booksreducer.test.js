@@ -1,4 +1,4 @@
-import booksReducer from "../../reducers/BooksReducer"
+import booksReducer from "./BooksReducer"
 
 test("should setup default items", () => {
   const state = booksReducer(undefined, { type: "@@INIT" })

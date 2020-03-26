@@ -1,5 +1,5 @@
 import React from "react"
-import NotFoundPage from "../../components/NotFoundPage"
+import NotFoundPage from "./NotFoundPage"
 import { shallow } from "enzyme"
 
 test("should render the global nav", () => {

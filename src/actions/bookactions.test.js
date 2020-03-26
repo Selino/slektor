@@ -1,4 +1,4 @@
-import { setSearchString } from "../../actions/booksactions"
+import { setSearchString } from "./booksactions"
 
 test("should setup a search object with the passed string", () => {
   const action = setSearchString("poop")

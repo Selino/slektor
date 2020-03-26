@@ -5,7 +5,7 @@ import {
   sortByAmount,
   setEndDate,
   setStartDate
-} from "../../actions/filtersactions"
+} from "./filtersactions"
 
 test("should set the passed text string within the filter mechanism", () => {
   const action = setTextFilter("poop")

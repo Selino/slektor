@@ -1,9 +1,9 @@
-import challengesReducer from "../../reducers/ChallengesReducer"
+import challengesReducer from "./ChallengesReducer"
 import { v4 as uuidv4 } from "uuid"
 import moment from "moment"
 import currentStateData, {
   newChallengeData
-} from "../fixtures/challengesFixture"
+} from "../tests/fixtures/challengesFixture"
 
 test("should return default challenges", () => {
   const expectedChallenge = {

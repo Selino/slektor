@@ -1,9 +1,9 @@
 import React from "react"
 import Dinero from "dinero.js"
 import moment from "moment"
-import ChallengeListItem from "../../components/challenges/ChallengeListItem"
+import ChallengeListItem from "./ChallengeListItem"
 import { shallow } from "enzyme"
-import ChallengeListData from "../fixtures/challengesFixture"
+import ChallengeListData from "../../tests/fixtures/challengesFixture"
 
 test("should render a single challenge item", () => {
   const wrapper = shallow(

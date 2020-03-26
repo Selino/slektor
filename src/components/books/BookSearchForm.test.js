@@ -1,8 +1,8 @@
 import React from "react"
 import { shallow } from "enzyme"
-import booksForm from "../../components/books/booksForm"
+import BookSearchForm from "./BookSearchForm"
 
 test("should render the book search form", () => {
-  const wrapper = shallow(<booksForm />)
+  const wrapper = shallow(<BookSearchForm />)
   expect(wrapper).toMatchSnapshot()
 })
