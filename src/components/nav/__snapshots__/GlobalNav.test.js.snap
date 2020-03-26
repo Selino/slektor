@@ -2,7 +2,7 @@
 
 exports[`should render the global nav 1`] = `
 <header
-  className="App-header"
+  className="GlobalNav"
 >
   <Navbar
     bg="dark"

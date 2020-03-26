@@ -1,5 +1,5 @@
 import React from "react"
-import GlobalNav from "../../components/nav/GlobalNav"
+import GlobalNav from "./GlobalNav"
 import { shallow } from "enzyme"
 
 test("should render the global nav", () => {
@@ -7,6 +7,6 @@ test("should render the global nav", () => {
   expect(wrapper).toMatchSnapshot()
   expect(wrapper.find("header")).toHaveLength(1)
   expect(wrapper.find(".App-logo")).toHaveLength(1)
-  expect(wrapper.find(".App-header").text()).toContain("Slektor App")
+  expect(wrapper.find(".GlobalNav").text()).toContain("Slektor App")
   expect(wrapper.find("#basic-navbar-nav")).toHaveLength(1)
 })
