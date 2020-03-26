@@ -1,15 +1,16 @@
 import React from "react"
 import { Card } from "react-bootstrap"
 import { connect } from "react-redux"
+import "./books.sass"
 
 export const BookList = props => {
   const bookItems = props.books.map(book => (
-    <Card key={book.id} style={{ marginBottom: "1rem" }}>
+    <Card key={book.id}>
       <Card.Body>
         {book.volumeInfo.imageLinks !== undefined && (
           <img
+            className='book-thumbnail'
             alt={book.volumeInfo.title}
-            style={{ float: "left", margin: "0 1rem 1rem 0" }}
             src={book.volumeInfo.imageLinks.smallThumbnail}
           />
         )}
@@ -21,7 +22,7 @@ export const BookList = props => {
   ))
 
   return (
-    <div>
+    <div className='book-list'>
       <h3>Book List</h3>
       {bookItems}
     </div>

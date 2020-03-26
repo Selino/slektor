@@ -1,6 +1,6 @@
 import React from "react"
 import { Button } from "react-bootstrap"
-export default function BookSearchForm(props) {
+export default function booksForm(props) {
   const handleSubmit = e => {
     e.preventDefault()
     console.log("test")

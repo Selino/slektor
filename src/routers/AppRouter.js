@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import BookList from "../components/booksearch/BookList"
+import BookList from "../components/books/BookList"
 import CreateChallenge from "../components/challenges/CreateChallenge"
 import HelpPage from "../components/HelpPage"
 import NotFoundPage from "../components/NotFoundPage.js"
