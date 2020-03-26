@@ -2,10 +2,11 @@ import React from "react"
 import { Nav, Navbar } from "react-bootstrap"
 import { LinkContainer } from "react-router-bootstrap"
 import logo from "../../logo.svg"
+import "./GlobalNav.sass"
 
 export default function globalNav() {
   return (
-    <header className='App-header'>
+    <header className='GlobalNav'>
       <Navbar fixed='top' bg='dark' variant='dark'>
         <Navbar.Brand href='#home'>
           <img
