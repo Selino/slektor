@@ -43,8 +43,8 @@ export const simulatedSearchData = () => ({
 export const getSampleData = () => ({
   filters: {
     sortBy: "date",
-    startDate: moment().startOf("month"),
-    endDate: moment().endOf("month"),
+    startDate: null,
+    endDate: null,
     text: ""
   },
   challenges: [
