@@ -21,7 +21,7 @@ const AppRouter = () => (
           <Route path='/edit/:id' component={EditChallenge} />
           <Route path='/create' component={CreateChallenge} />
           <Route path='/help' component={HelpPage} />
-          <Route component={NotFoundPage} />
+          <Route component={BookList} />
         </Switch>
       </div>
     </div>
