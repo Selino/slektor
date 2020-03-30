@@ -11,7 +11,7 @@ import "../App.sass"
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div className='App' tag={process.env.REACT_APP_API_KEY}>
+    <div className='App'>
       <GlobalNav />
       <div className='app-body'>
         <Switch>
