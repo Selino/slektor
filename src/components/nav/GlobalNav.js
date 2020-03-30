@@ -6,41 +6,41 @@ import "./GlobalNav.sass"
 
 export default function globalNav() {
   return (
-    <header className='GlobalNav'>
-      <Navbar fixed='top' bg='dark' variant='dark'>
-        <Navbar.Brand href='#home'>
+    <Navbar className='GlobalNav' fixed='top' bg='dark' variant='dark'>
+      <Navbar.Brand href='#home'>
+        <a className='App-Logo-Link' href='/'>
           <img
             alt='Slektor App Logo'
             src={logo}
             className='d-inline-block App-logo'
           />
           Slektor App
-        </Navbar.Brand>
-        <Navbar.Collapse id='basic-navbar-nav'>
-          <Nav className='ml-auto'>
-            <Nav.Item>
-              <LinkContainer to='/booklist'>
-                <Nav.Link>Books</Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
-            <Nav.Item>
-              <LinkContainer to='/challenges'>
-                <Nav.Link>Challenges</Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
-            <Nav.Item>
-              <LinkContainer to='/create'>
-                <Nav.Link>Create</Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
-            <Nav.Item>
-              <LinkContainer to='/help'>
-                <Nav.Link>Help</Nav.Link>
-              </LinkContainer>
-            </Nav.Item>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </header>
+        </a>
+      </Navbar.Brand>
+      <Navbar.Collapse id='basic-navbar-nav'>
+        <Nav className='ml-auto'>
+          <Nav.Item>
+            <LinkContainer to='/booklist'>
+              <Nav.Link>Books</Nav.Link>
+            </LinkContainer>
+          </Nav.Item>
+          <Nav.Item>
+            <LinkContainer to='/challenges'>
+              <Nav.Link>Challenges</Nav.Link>
+            </LinkContainer>
+          </Nav.Item>
+          <Nav.Item>
+            <LinkContainer to='/create'>
+              <Nav.Link>Create</Nav.Link>
+            </LinkContainer>
+          </Nav.Item>
+          <Nav.Item>
+            <LinkContainer to='/help'>
+              <Nav.Link>Help</Nav.Link>
+            </LinkContainer>
+          </Nav.Item>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   )
 }
