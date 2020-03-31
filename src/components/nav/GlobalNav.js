@@ -13,7 +13,7 @@ export default function globalNav() {
           src={logo}
           className='d-inline-block App-logo'
         />
-        Slektor App
+        {process.env.REACT_APP_TITLE}
       </Navbar.Brand>
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='ml-auto'>
