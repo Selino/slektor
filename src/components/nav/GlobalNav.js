@@ -7,15 +7,13 @@ import "./GlobalNav.sass"
 export default function globalNav() {
   return (
     <Navbar className='GlobalNav' fixed='top' bg='dark' variant='dark'>
-      <Navbar.Brand href='#home'>
-        <a className='App-Logo-Link' href='/'>
-          <img
-            alt='Slektor App Logo'
-            src={logo}
-            className='d-inline-block App-logo'
-          />
-          Slektor App
-        </a>
+      <Navbar.Brand>
+        <img
+          alt='Slektor App Logo'
+          src={logo}
+          className='d-inline-block App-logo'
+        />
+        Slektor App
       </Navbar.Brand>
       <Navbar.Collapse id='basic-navbar-nav'>
         <Nav className='ml-auto'>
