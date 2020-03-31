@@ -2,6 +2,7 @@ import React from "react"
 import { Card } from "react-bootstrap"
 import { connect } from "react-redux"
 import "./books.sass"
+import BookSearchForm from "./BookSearchForm"
 
 export const BookList = props => {
   const bookItems = props.books.map(book => (
@@ -24,6 +25,7 @@ export const BookList = props => {
   return (
     <div className='book-list'>
       <h3>Book List</h3>
+      <BookSearchForm />
       {bookItems}
     </div>
   )

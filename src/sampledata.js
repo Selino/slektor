@@ -1,7 +1,7 @@
 import moment from "moment"
 
 // Google Books API
-// https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key=AIzaSyANiQq7pX6TFzAv9wuBa6XlzFsaMuNloc4
+// https://www.googleapis.com/books/v1/volumes?q=road+less+traveled&key={REACT_APP_GOOGLE_BOOKS_API_KEY}
 
 export const simulatedSearchData = () => ({
   items: [
