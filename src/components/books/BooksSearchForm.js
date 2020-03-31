@@ -1,25 +1,24 @@
 import React, { useState } from "react"
-import {
-  Form,
-  FormLabel,
-  Button,
-  InputGroup,
-  FormControl,
-  Alert
-} from "react-bootstrap"
+import { Form, Button, InputGroup, FormControl, Alert } from "react-bootstrap"
 
 const BooksSearchForm = props => {
   const [searchText, setSearchText] = useState(null)
+  const [error, setError] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log("submitted")
+    if (searchText != null && searchText != "") {
+      setError("")
+      console.log(`submitted: ${searchText}`)
+    } else {
+      setError("Search cannot be empty!")
+    }
   }
 
   const onSearchTextChange = e => {
     const string = e.target.value
-    setSearchText({ searchText: string })
-    console.log(string)
+    setSearchText(string)
+    searchText != "" ? setError("") : setError("Search cannot be empty!")
   }
   return (
     <Form onSubmit={handleSubmit}>
@@ -40,6 +39,7 @@ const BooksSearchForm = props => {
           </Button>
         </InputGroup.Append>
       </InputGroup>
+      {error && <Alert variant='danger'>{error}</Alert>}
     </Form>
   )
 }
