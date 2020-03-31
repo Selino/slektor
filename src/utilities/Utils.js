@@ -26,6 +26,8 @@ export const getVisibleItems = (item, { sortBy, startDate, endDate, text }) => {
         return a.startDate < b.endDate ? 1 : -1
       } else if (sortBy === "amount") {
         return a.amount < b.amount ? 1 : -1
+      } else {
+        return []
       }
     })
 }
