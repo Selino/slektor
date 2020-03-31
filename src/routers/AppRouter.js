@@ -15,7 +15,6 @@ const AppRouter = () => (
       <GlobalNav />
       <div className='app-body'>
         <Switch>
-          <Route path='/' component={BookList} exact={true} />
           <Route path='/booklist' component={BookList} />
           <Route path='/challenges' component={ChallengesList} />
           <Route path='/edit/:id' component={EditChallenge} />
