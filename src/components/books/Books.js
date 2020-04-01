@@ -1,10 +1,13 @@
 import React, { useState } from "react"
 import { Form, Button, InputGroup, FormControl, Alert } from "react-bootstrap"
 import BookList from "./BookList"
-import { connect } from "react-redux"
+import { sendBookSearch } from "../../actions/booksactions"
+import { useSelector, useDispatch } from "react-redux"
 
 const Books = props => {
-  const [books, setBooks] = useState(props.books)
+  const books = useSelector(state => state.books)
+  const dispatch = useDispatch()
+
   const [searchText, setSearchText] = useState(null)
   const [error, setError] = useState("")
 
@@ -16,7 +19,7 @@ const Books = props => {
       .then(data => {
         if (data.items.length !== 0) {
           console.log(data.items)
-          setBooks(data.items)
+          dispatch(sendBookSearch(data.items))
         }
       })
       .catch(err => {
@@ -62,18 +65,9 @@ const Books = props => {
         {error && <Alert variant='danger'>{error}</Alert>}
       </Form>
       <h3>Book List</h3>
-      <BookList books={books} />
+      <BookList Books={books} />
     </div>
   )
 }
 
-const mapStateToProps = state => {
-  return {
-    books: state.books,
-    filters: {
-      sortBooksBy: state.filters.sortBooksBy
-    }
-  }
-}
-
-export default connect(mapStateToProps)(Books)
+export default Books

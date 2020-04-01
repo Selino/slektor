@@ -1,4 +1,4 @@
-export const sendBookSearch = (searchString = "") => ({
+export const sendBookSearch = (booksArray = []) => ({
   type: "SEND_BOOK_SEARCH",
-  searchString
+  books: booksArray
 })

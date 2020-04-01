@@ -2,8 +2,8 @@ import React from "react"
 import { Card } from "react-bootstrap"
 import "./books.sass"
 
-const BookList = props => {
-  const bookItems = props.books.map(book => (
+function BookList(props) {
+  const bookItems = props.Books.map(book => (
     <Card key={book.id}>
       <Card.Body>
         {book.volumeInfo.imageLinks !== undefined && (
@@ -14,7 +14,11 @@ const BookList = props => {
           />
         )}
         <h2>{book.volumeInfo.title}</h2>
-        <h4>{book.volumeInfo.authors.map(author => author)}</h4>
+        <h4>
+          {!book.volumeInfo.authors
+            ? ""
+            : book.volumeInfo.authors.map(author => author)}
+        </h4>
         <p>{book.volumeInfo.description}</p>
       </Card.Body>
     </Card>

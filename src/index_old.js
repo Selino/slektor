@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { createStore, combineReducers } from "redux"
 import { Provider } from "react-redux"
-import getSampleData, { simulatedSearchData } from "./sampledata"
+import { getSampleData, simulatedSearchData } from "./sampledata"
 import { v4 as uuidv4 } from "uuid"
 
 // ------- action generators
