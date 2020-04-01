@@ -18,7 +18,6 @@ const Books = props => {
       .then(res => res.json())
       .then(data => {
         if (data.items.length !== 0) {
-          console.log(data.items)
           dispatch(sendBookSearch(data.items))
         }
       })
