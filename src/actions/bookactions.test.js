@@ -1,9 +1,9 @@
 import { setSearchString } from "./booksactions"
 
 test("should setup a search object with the passed string", () => {
-  const action = setSearchString("poop")
+  const action = SENDBOOKSEARCH("poop")
   expect(action).toEqual({
-    type: "SET_SEARCH_STRING",
+    type: "SEND_BOOK_SEARCH",
     searchString: "poop"
   })
 })
