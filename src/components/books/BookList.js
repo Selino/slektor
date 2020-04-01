@@ -1,10 +1,9 @@
 import React from "react"
 import { Card } from "react-bootstrap"
-import { connect } from "react-redux"
 import "./books.sass"
 
-export const BookList = props => {
-  const bookItems = props.books.map(book => (
+function BookList(props) {
+  const bookItems = props.Books.map(book => (
     <Card key={book.id}>
       <Card.Body>
         {book.volumeInfo.imageLinks !== undefined && (
@@ -15,26 +14,17 @@ export const BookList = props => {
           />
         )}
         <h2>{book.volumeInfo.title}</h2>
-        <h4>{book.volumeInfo.authors.map(author => author)}</h4>
+        <h4>
+          {!book.volumeInfo.authors
+            ? ""
+            : book.volumeInfo.authors.map(author => author)}
+        </h4>
         <p>{book.volumeInfo.description}</p>
       </Card.Body>
     </Card>
   ))
 
-  return (
-    <div className='book-list'>
-      <h3>Book List</h3>
-      {bookItems}
-    </div>
-  )
-}
-const mapStateToProps = state => {
-  return {
-    books: state.books,
-    filters: {
-      sortBooksBy: state.filters.sortBooksBy
-    }
-  }
+  return <div className='book-list'>{bookItems}</div>
 }
 
-export default connect(mapStateToProps)(BookList)
+export default BookList

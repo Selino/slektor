@@ -1,6 +1,6 @@
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import BookList from "../components/books/BookList"
+import Books from "../components/books/Books"
 import CreateChallenge from "../components/challenges/CreateChallenge"
 import HelpPage from "../components/helppage/HelpPage"
 import GlobalNav from "../components/nav/GlobalNav"
@@ -14,12 +14,12 @@ const AppRouter = () => (
       <GlobalNav />
       <div className='app-body'>
         <Switch>
-          <Route path='/booklist' component={BookList} />
+          <Route path='/books' component={Books} />
           <Route path='/challenges' component={ChallengesList} />
           <Route path='/edit/:id' component={EditChallenge} />
           <Route path='/create' component={CreateChallenge} />
           <Route path='/help' component={HelpPage} />
-          <Route component={BookList} />
+          <Route component={Books} />
         </Switch>
       </div>
     </div>
