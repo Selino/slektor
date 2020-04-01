@@ -1,4 +1,4 @@
-export const setSearchString = (searchString = "") => ({
-  type: "SET_SEARCH_STRING",
+export const sendBookSearch = (searchString = "") => ({
+  type: "SEND_BOOK_SEARCH",
   searchString
 })

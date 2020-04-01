@@ -1,10 +1,8 @@
 import React from "react"
 import { Card } from "react-bootstrap"
-import { connect } from "react-redux"
 import "./books.sass"
-import BooksSearchForm from "./BooksSearchForm"
 
-export const BookList = props => {
+const BookList = props => {
   const bookItems = props.books.map(book => (
     <Card key={book.id}>
       <Card.Body>
@@ -22,21 +20,7 @@ export const BookList = props => {
     </Card>
   ))
 
-  return (
-    <div className='book-list'>
-      <h3>Book List</h3>
-      <BooksSearchForm />
-      {bookItems}
-    </div>
-  )
-}
-const mapStateToProps = state => {
-  return {
-    books: state.books,
-    filters: {
-      sortBooksBy: state.filters.sortBooksBy
-    }
-  }
+  return <div className='book-list'>{bookItems}</div>
 }
 
-export default connect(mapStateToProps)(BookList)
+export default BookList
