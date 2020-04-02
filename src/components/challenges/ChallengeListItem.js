@@ -40,7 +40,7 @@ const ChallengeListItem = props => {
           <Image
             rounded
             src={bookThumbnail}
-            style={{ float: "left", marginRight: "2rem" }}
+            style={{ float: "left", marginRight: "2rem", marginBottom: "1rem" }}
           />
           Etiam sagittis id diam ac rhoncus. Suspendisse ut rhoncus enim. Morbi
           vehicula sodales nibh quis mattis. Vestibulum et justo vitae odio

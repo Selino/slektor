@@ -48,8 +48,8 @@ const Books = props => {
           <FormControl
             type='text'
             onChange={onSearchTextChange}
-            aria-label='Enter search string'
-            placeholder='Enter search string'
+            aria-label='Search for title'
+            placeholder='Search for title'
             defaultValue={searchText}
             name='Search'
             style={{ width: "60%" }}
