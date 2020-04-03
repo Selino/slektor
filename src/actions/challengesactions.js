@@ -11,7 +11,7 @@ export const createChallenge = ({
   bookThumbnail = "",
   amount = 0,
   startDate = moment(),
-  endDate = moment().endOf("month")
+  endDate = moment().endOf("month"),
 } = {}) => ({
   type: "CREATE_CHALLENGE",
   challenge: {
@@ -20,25 +20,26 @@ export const createChallenge = ({
     reader,
     status,
     bookID,
+    bookThumbnail,
     bookTitle,
     bookThumbnail,
     amount,
     startDate,
-    endDate
-  }
+    endDate,
+  },
 })
 
 export const removeChallenge = ({ id } = {}) => ({
   type: "REMOVE_CHALLENGE",
   challenge: {
-    id: id
-  }
+    id: id,
+  },
 })
 
 export const updateChallenge = (id, updates) => ({
   type: "UPDATE_CHALLENGE",
   challenge: {
     id: id,
-    updates
-  }
+    updates,
+  },
 })

@@ -4,7 +4,7 @@ import Dinero from "dinero.js"
 import moment from "moment"
 import { Link } from "react-router-dom"
 
-const ChallengeListItem = props => {
+const ChallengeListItem = (props) => {
   const {
     id,
     amount,
@@ -12,7 +12,7 @@ const ChallengeListItem = props => {
     reader,
     startDate,
     endDate,
-    bookThumbnail
+    bookThumbnail,
   } = props
   return (
     <Card key={id} style={{ marginBottom: "2rem" }}>
@@ -22,7 +22,7 @@ const ChallengeListItem = props => {
             Current Bid :{" "}
             {Dinero({
               amount: amount,
-              currency: "USD"
+              currency: "USD",
             }).toFormat("$0,0.00")}
           </Badge>
           {bookTitle}
