@@ -7,17 +7,25 @@ import {
   FormControl,
   Alert
 } from "react-bootstrap"
-import { v4 as uuidv4 } from "uuid"
 import moment from "moment"
 import "react-dates/initialize"
 import { SingleDatePicker } from "react-dates"
 import "react-dates/lib/css/_datepicker.css"
 
 function ChallengeForm(props) {
+  const isQuery = props.location ? true : false
+  let queryBookId = "939832",
+    queryBookTitle = "Book Title"
+  if (isQuery.legnth >= 1) {
+    console.log(isQuery)
+    queryBookId = props.location.bookId
+    queryBookTitle = props.location.title
+  }
+
   const [state, setState] = useState({
-    bookTitle: props.challenge ? props.challenge.bookTitle : "Book Goes Here ",
+    bookTitle: props.challenge ? props.challenge.bookTitle : queryBookTitle,
     amount: props.challenge ? props.challenge.amount / 100 : 1,
-    bookId: props.challenge ? props.challenge.bookId : uuidv4(),
+    bookId: props.challenge ? props.challenge.bookId : queryBookId,
     reader: props.challenge ? props.challenge.reader : "",
     startDate: props.challenge ? props.challenge.startDate : moment(),
     endDate: props.challenge

@@ -4,39 +4,24 @@ import BookList from "./BookList"
 import { sendBookSearch } from "../../actions/booksactions"
 import { useSelector, useDispatch } from "react-redux"
 
-const Books = props => {
-  const books = useSelector(state => state.books)
+const Books = (props) => {
+  const books = useSelector((state) => state.books)
   const dispatch = useDispatch()
 
   const [searchText, setSearchText] = useState(null)
   const [error, setError] = useState("")
 
-  const goGetIt = string => {
-    fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${string}&key=${process.env.REACT_APP_GOOGLE_BOOKS_API_KEY}`
-    )
-      .then(res => res.json())
-      .then(data => {
-        if (data.items.length !== 0) {
-          dispatch(sendBookSearch(data.items))
-        }
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
-
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     if (searchText !== null && searchText !== "") {
       setError("")
-      goGetIt(searchText)
+      dispatch(sendBookSearch(searchText))
     } else {
       setError("Search cannot be empty!")
     }
   }
 
-  const onSearchTextChange = e => {
+  const onSearchTextChange = (e) => {
     const string = e.target.value
     setSearchText(string)
     searchText !== "" ? setError("") : setError("Search cannot be empty!")
