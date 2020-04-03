@@ -3,12 +3,12 @@ import ChallengeForm from "./ChallengeForm"
 import { connect } from "react-redux"
 import { createChallenge } from "../../actions/challengesactions"
 
-const CreateChallenge = props => {
+const CreateChallenge = (props) => {
   return (
     <div>
       <h3>Create Challenge</h3>
       <ChallengeForm
-        onSubmit={challenge => {
+        onSubmit={(challenge) => {
           props.dispatch(createChallenge(challenge))
           props.history.push("/challenges")
         }}
