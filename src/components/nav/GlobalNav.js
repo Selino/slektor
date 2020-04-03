@@ -27,16 +27,6 @@ export default function globalNav() {
               <Nav.Link>Challenges</Nav.Link>
             </LinkContainer>
           </Nav.Item>
-          <Nav.Item>
-            <LinkContainer to='/create'>
-              <Nav.Link>Create</Nav.Link>
-            </LinkContainer>
-          </Nav.Item>
-          <Nav.Item>
-            <LinkContainer to='/help'>
-              <Nav.Link>Help</Nav.Link>
-            </LinkContainer>
-          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
