@@ -27,23 +27,13 @@ function ChallengeForm(props) {
       : moment().endOf("month"),
   })
 
-  const [readers] = useState(["Tommy", "Dick", "Jane"])
   const [calendarFocus, setCalendarFocus] = useState(false)
-
-  // const [myDate, setMyDate] = useState(moment())
   const [error, setError] = useState("")
 
   const onAmountChange = (e) => {
     const amount = e.target.value
     if (amount.match(/^\d*?$/) && amount <= 100 && amount > 0) {
       setState({ ...state, amount: parseInt(amount, 10) })
-    }
-  }
-
-  const onReaderChange = (e) => {
-    const reader = e.target.value
-    if (reader) {
-      setState({ ...state, reader })
     }
   }
 
@@ -65,7 +55,6 @@ function ChallengeForm(props) {
       setError("")
       props.onSubmit({
         owner: "current user",
-        reader: state.reader,
         amount: state.amount * 100,
         bookID: state.bookID,
         bookThumbnail: state.bookThumbnail,
@@ -75,14 +64,6 @@ function ChallengeForm(props) {
       })
     }
   }
-
-  const readersSelectItems = readers.map((r) => {
-    return (
-      <option key={r} value={r}>
-        {r}
-      </option>
-    )
-  })
 
   return (
     <div>
@@ -106,7 +87,6 @@ function ChallengeForm(props) {
             type='number'
             onChange={onAmountChange}
             aria-label='Amount (to the nearest dollar)'
-            //   placeholder={state.amount}
             value={state.amount}
             autoFocus
           />
@@ -114,16 +94,6 @@ function ChallengeForm(props) {
             <InputGroup.Text>$100 max</InputGroup.Text>
           </InputGroup.Append>
         </InputGroup>
-        <Form.Group controlId='exampleForm.ControlSelect1'>
-          <FormLabel>Select reader</FormLabel>
-          <Form.Control
-            value={state.reader}
-            onChange={onReaderChange}
-            as='select'
-          >
-            {readersSelectItems}
-          </Form.Control>
-        </Form.Group>
 
         <Form.Group controlId='exampleForm.ControlSelect1'>
           <FormLabel style={{ marginRight: ".5rem" }}>

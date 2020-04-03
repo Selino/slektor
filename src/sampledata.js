@@ -12,9 +12,9 @@ export const simulatedSearchData = () => ({
         authors: ["Thomas N. Bainter"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=LHTexEiizN4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
+            "http://books.google.com/books/content?id=LHTexEiizN4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        },
+      },
     },
     {
       id: "p6Jdgx-lWZ8C",
@@ -23,9 +23,9 @@ export const simulatedSearchData = () => ({
         authors: ["Josh Richman", "Anish Sheth"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=p6Jdgx-lWZ8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
+            "http://books.google.com/books/content?id=p6Jdgx-lWZ8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        },
+      },
     },
     {
       id: "I8YWAQAAMAAJ",
@@ -33,11 +33,11 @@ export const simulatedSearchData = () => ({
         title: "It Hurts when I Poop!",
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=I8YWAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-        }
-      }
-    }
-  ]
+            "http://books.google.com/books/content?id=I8YWAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+        },
+      },
+    },
+  ],
 })
 
 export const getSampleData = () => ({
@@ -45,13 +45,12 @@ export const getSampleData = () => ({
     sortBy: "date",
     startDate: null,
     endDate: null,
-    text: ""
+    text: "",
   },
   challenges: [
     {
       id: "1",
       owner: "John Doe",
-      reader: "Steve Jang",
       status: "running",
       bookID: "xIItr7-StUEC",
       bookTitle: "The Hobbit",
@@ -59,12 +58,11 @@ export const getSampleData = () => ({
         "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 500,
       startDate: moment(1583326800000),
-      endDate: moment(1588338000000)
+      endDate: moment(1588338000000),
     },
     {
       id: "2",
       owner: "Steve Jang",
-      reader: "Jane Wilder",
       status: "running",
       bookID: "H8ON-dTgQQYC",
       bookTitle: "Kama Pootra",
@@ -72,12 +70,11 @@ export const getSampleData = () => ({
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 300,
       startDate: moment(1580562000000),
-      endDate: moment(1585746000000)
+      endDate: moment(1585746000000),
     },
     {
       id: "3",
       owner: "Carol Johnson",
-      reader: "Mike Butt",
       status: "running",
       bookID: "H8ON-dTgQQYC",
       bookTitle: "The Hobbit, Or, There and Back Again",
@@ -85,8 +82,8 @@ export const getSampleData = () => ({
         "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 1500,
       startDate: moment(1583067600000),
-      endDate: moment(1586955600000)
-    }
+      endDate: moment(1586955600000),
+    },
   ],
   items: [
     {
@@ -96,9 +93,9 @@ export const getSampleData = () => ({
         authors: ["J.R.R. Tolkien"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
+            "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        },
+      },
     },
     {
       id: "hFfhrCWiLSMC",
@@ -107,9 +104,9 @@ export const getSampleData = () => ({
         authors: ["John Ronald Reuel Tolkien"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
+            "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        },
+      },
     },
     {
       id: "H8ON-dTgQQYC",
@@ -118,9 +115,9 @@ export const getSampleData = () => ({
         authors: ["Jude Fisher"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
+            "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        },
+      },
     },
     {
       id: "KY0BDObXftUC",
@@ -129,9 +126,9 @@ export const getSampleData = () => ({
         authors: ["Corey Olsen"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=KY0BDObXftUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
+            "http://books.google.com/books/content?id=KY0BDObXftUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        },
+      },
     },
     {
       id: "N_0VhzQKIIAC",
@@ -140,9 +137,9 @@ export const getSampleData = () => ({
         authors: ["Jim Ware"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=N_0VhzQKIIAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
-        }
-      }
-    }
-  ]
+            "http://books.google.com/books/content?id=N_0VhzQKIIAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        },
+      },
+    },
+  ],
 })
