@@ -5,7 +5,7 @@ import {
   Button,
   InputGroup,
   FormControl,
-  Alert
+  Alert,
 } from "react-bootstrap"
 import moment from "moment"
 import "react-dates/initialize"
@@ -13,24 +13,15 @@ import { SingleDatePicker } from "react-dates"
 import "react-dates/lib/css/_datepicker.css"
 
 function ChallengeForm(props) {
-  const isQuery = props.location ? true : false
-  let queryBookId = "939832",
-    queryBookTitle = "Book Title"
-  if (isQuery.legnth >= 1) {
-    console.log(isQuery)
-    queryBookId = props.location.bookId
-    queryBookTitle = props.location.title
-  }
-
   const [state, setState] = useState({
-    bookTitle: props.challenge ? props.challenge.bookTitle : queryBookTitle,
+    bookTitle: props.challenge ? props.challenge.bookTitle : "some title",
     amount: props.challenge ? props.challenge.amount / 100 : 1,
-    bookId: props.challenge ? props.challenge.bookId : queryBookId,
+    bookId: props.challenge ? props.challenge.bookId : "some ID",
     reader: props.challenge ? props.challenge.reader : "",
     startDate: props.challenge ? props.challenge.startDate : moment(),
     endDate: props.challenge
       ? moment(props.challenge.endDate)
-      : moment().endOf("month")
+      : moment().endOf("month"),
   })
 
   const [readers] = useState(["Tommy", "Dick", "Jane"])
@@ -39,21 +30,21 @@ function ChallengeForm(props) {
   // const [myDate, setMyDate] = useState(moment())
   const [error, setError] = useState("")
 
-  const onAmountChange = e => {
+  const onAmountChange = (e) => {
     const amount = e.target.value
     if (amount.match(/^\d*?$/) && amount <= 100 && amount > 0) {
       setState({ ...state, amount: parseInt(amount, 10) })
     }
   }
 
-  const onReaderChange = e => {
+  const onReaderChange = (e) => {
     const reader = e.target.value
     if (reader) {
       setState({ ...state, reader })
     }
   }
 
-  const onDateChange = endDate => {
+  const onDateChange = (endDate) => {
     if (endDate) {
       setState({ ...state, endDate })
     }
@@ -63,7 +54,7 @@ function ChallengeForm(props) {
     setCalendarFocus(focused)
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     if (state.amount === "" || state.amount < 1) {
       setError("Amount cannot be empty!")
@@ -76,12 +67,12 @@ function ChallengeForm(props) {
         bookId: state.bookId,
         bookTitle: state.bookTitle,
         startDate: state.startDate,
-        endDate: state.endDate.valueOf()
+        endDate: state.endDate.valueOf(),
       })
     }
   }
 
-  const readersSelectItems = readers.map(r => {
+  const readersSelectItems = readers.map((r) => {
     return (
       <option key={r} value={r}>
         {r}
@@ -96,7 +87,7 @@ function ChallengeForm(props) {
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId='formBasicTitle'>
           <Form.Control
-            onChange={e => (state.bookTitle = e.target.value)}
+            onChange={(e) => (state.bookTitle = e.target.value)}
             defaultValue={state.bookTitle}
             type='text'
             placeholder={state.bookTitle}
