@@ -13,11 +13,20 @@ function BookList(props) {
             state: {
               bookID: book.id,
               bookTitle: book.volumeInfo.title,
-              bookThumbnail: book.volumeInfo.imageLinks.smallThumbnail,
+              bookThumbnail:
+                book.volumeInfo.imageLinks !== undefined
+                  ? book.volumeInfo.imageLinks.smallThumbnail
+                  : "",
             },
           }}
         >
-          Test
+          <Button
+            className='btnBooksCreateChallenge'
+            variant='primary'
+            size='sm'
+          >
+            Create Challenge
+          </Button>
         </Link>
         {book.volumeInfo.imageLinks !== undefined && (
           <img
