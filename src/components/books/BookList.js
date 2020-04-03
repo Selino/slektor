@@ -1,11 +1,24 @@
 import React from "react"
-import { Card } from "react-bootstrap"
+import { Card, Button } from "react-bootstrap"
 import "./books.sass"
+import { Link } from "react-router-dom"
 
 function BookList(props) {
-  const bookItems = props.Books.map(book => (
+  const bookItems = props.Books.map((book) => (
     <Card key={book.id}>
       <Card.Body>
+        <Link
+          to={{
+            pathname: "/create",
+            state: {
+              bookID: book.id,
+              bookTitle: book.volumeInfo.title,
+              bookThumbnail: book.volumeInfo.imageLinks.smallThumbnail,
+            },
+          }}
+        >
+          Test
+        </Link>
         {book.volumeInfo.imageLinks !== undefined && (
           <img
             className='book-thumbnail'
@@ -17,7 +30,7 @@ function BookList(props) {
         <h4>
           {!book.volumeInfo.authors
             ? ""
-            : book.volumeInfo.authors.map(author => author)}
+            : book.volumeInfo.authors.map((author) => author)}
         </h4>
         <p>{book.volumeInfo.description}</p>
       </Card.Body>

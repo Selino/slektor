@@ -14,9 +14,12 @@ import "react-dates/lib/css/_datepicker.css"
 
 function ChallengeForm(props) {
   const [state, setState] = useState({
-    bookTitle: props.challenge ? props.challenge.bookTitle : "some title",
+    bookTitle: props.challenge ? props.challenge.bookTitle : props.bookTitle,
     amount: props.challenge ? props.challenge.amount / 100 : 1,
-    bookId: props.challenge ? props.challenge.bookId : "some ID",
+    bookID: props.challenge ? props.challenge.bookID : props.bookID,
+    bookThumbnail: props.challenge
+      ? props.challenge.bookThumbnail
+      : props.bookThumbnail,
     reader: props.challenge ? props.challenge.reader : "",
     startDate: props.challenge ? props.challenge.startDate : moment(),
     endDate: props.challenge
@@ -64,7 +67,8 @@ function ChallengeForm(props) {
         owner: "current user",
         reader: state.reader,
         amount: state.amount * 100,
-        bookId: state.bookId,
+        bookID: state.bookID,
+        bookThumbnail: state.bookThumbnail,
         bookTitle: state.bookTitle,
         startDate: state.startDate,
         endDate: state.endDate.valueOf(),
