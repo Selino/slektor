@@ -33,8 +33,8 @@ const Books = (props) => {
           <FormControl
             type='text'
             onChange={onSearchTextChange}
-            aria-label='Search for title'
-            placeholder='Search for title'
+            aria-label='Search for book title'
+            placeholder='Search for book title'
             defaultValue={searchText}
             name='Search'
             style={{ width: "60%" }}
@@ -48,7 +48,6 @@ const Books = (props) => {
         </InputGroup>
         {error && <Alert variant='danger'>{error}</Alert>}
       </Form>
-      <h3>Book List</h3>
       <BookList Books={books} />
     </div>
   )

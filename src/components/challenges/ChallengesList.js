@@ -8,18 +8,17 @@ import ChallengeListFilters from "./ChallengeListFilters"
 function ChallengesList(props) {
   return (
     <div>
-      <h3>Challenges List</h3>
       <ChallengeListFilters />
-      {props.challenges.map(challenge => {
+      {props.challenges.map((challenge) => {
         return <ChallengeListItem key={challenge.id} {...challenge} />
       })}
     </div>
   )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    challenges: getVisibleItems(state.challenges, state.filters)
+    challenges: getVisibleItems(state.challenges, state.filters),
   }
 }
 

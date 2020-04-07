@@ -51,7 +51,7 @@ const ChallengeListItem = (props) => {
         </Card.Text>
 
         <div className='row'>
-          <div className='col-md-3 col-lg-2'>
+          <div className='col-sm-12'>
             <Link to={`/edit/${id}`}>
               <Button block variant='secondary'>
                 Edit

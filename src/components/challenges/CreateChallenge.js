@@ -14,7 +14,7 @@ const CreateChallenge = (props) => {
         bookThumbnail={bookThumbnail}
         onSubmit={(challenge) => {
           props.dispatch(createChallenge(challenge))
-          props.history.push("/challenges")
+          props.history.push("/dashboard")
         }}
       />
     </div>

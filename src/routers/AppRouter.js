@@ -6,6 +6,7 @@ import HelpPage from "../components/helppage/HelpPage"
 import GlobalNav from "../components/nav/GlobalNav"
 import ChallengesList from "../components/challenges/ChallengesList"
 import EditChallenge from "../components/challenges/EditChallenge"
+import Dashboard from "../components/dashboard/Dashboard"
 import "../App.sass"
 
 const AppRouter = () => (
@@ -18,8 +19,9 @@ const AppRouter = () => (
           <Route path='/challenges' component={ChallengesList} />
           <Route path='/edit/:id' component={EditChallenge} />
           <Route path='/create' component={CreateChallenge} />
+          <Route path='/dashboard' component={Dashboard} />
           <Route path='/help' component={HelpPage} />
-          <Route component={Books} />
+          <Route component={Dashboard} />
         </Switch>
       </div>
     </div>

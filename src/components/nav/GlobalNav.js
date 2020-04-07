@@ -15,20 +15,6 @@ export default function globalNav() {
         />
         {process.env.REACT_APP_TITLE}
       </Navbar.Brand>
-      <Navbar.Collapse id='basic-navbar-nav'>
-        <Nav className='ml-auto'>
-          <Nav.Item>
-            <LinkContainer to='/booklist'>
-              <Nav.Link>Books</Nav.Link>
-            </LinkContainer>
-          </Nav.Item>
-          <Nav.Item>
-            <LinkContainer to='/challenges'>
-              <Nav.Link>Challenges</Nav.Link>
-            </LinkContainer>
-          </Nav.Item>
-        </Nav>
-      </Navbar.Collapse>
     </Navbar>
   )
 }
