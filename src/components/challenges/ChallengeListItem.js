@@ -1,58 +1,42 @@
 import React from "react"
-import { Card, Badge, Image, Button } from "react-bootstrap"
+import { Image, Button, Container, Row, Col } from "react-bootstrap"
 import Dinero from "dinero.js"
 import moment from "moment"
 import { Link } from "react-router-dom"
+import "./challenges.sass"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEdit } from "@fortawesome/free-solid-svg-icons"
 
 const ChallengeListItem = (props) => {
-  const {
-    id,
-    amount,
-    bookTitle,
-    reader,
-    startDate,
-    endDate,
-    bookThumbnail,
-  } = props
+  const { id, amount, bookTitle, endDate, bookThumbnail } = props
   return (
-    <Card key={id} style={{ marginBottom: "2rem" }}>
-      <Card.Body>
-        <Card.Title>
-          <Badge variant='success' className='float-right'>
-            Current Bid :{" "}
+    <Container className='challenge-item'>
+      <Row>
+        <Col>
+          <Image rounded className='book-thumbnail' src={bookThumbnail} />
+        </Col>
+        <Col sm={4}>
+          <p className='book-title'>{bookTitle}</p>
+          <p className='date'>{moment(endDate).format("MMMM Do YYYY")}</p>
+        </Col>
+        <Col>
+          <p className='amount'>
             {Dinero({
               amount: amount,
               currency: "USD",
             }).toFormat("$0,0.00")}
-          </Badge>
-          {bookTitle}
-        </Card.Title>
-        <div style={{ marginBottom: "1rem" }}>
-          Reader : <strong>{reader}</strong>
-          <br />
-          Starts : &nbsp;
-          <strong>{moment(startDate).format("MMMM Do YYYY")}</strong>
-          <br />
-          Ends : &nbsp;
-          <strong>{moment(endDate).format("MMMM Do YYYY")}</strong>
-        </div>
-        <Image
-          rounded
-          src={bookThumbnail}
-          style={{ float: "left", marginRight: "2rem", marginBottom: "1rem" }}
-        />
+          </p>
+        </Col>
 
-        <div className='row'>
-          <div className='col-sm-12'>
-            <Link to={`/edit/${id}`}>
-              <Button block variant='secondary'>
-                Edit
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </Card.Body>
-    </Card>
+        <Col>
+          <Link to={`/edit/${id}`}>
+            <Button size='sm' variant='outline-secondary'>
+              <FontAwesomeIcon icon={faEdit} />
+            </Button>
+          </Link>
+        </Col>
+      </Row>
+    </Container>
   )
 }
 

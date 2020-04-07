@@ -3,18 +3,18 @@ import ChallengeForm from "./ChallengeForm"
 import { connect } from "react-redux"
 import {
   updateChallenge,
-  removeChallenge
+  removeChallenge,
 } from "../../actions/challengesactions"
 import { Button } from "react-bootstrap"
 
-const EditChallenge = props => {
+const EditChallenge = (props) => {
   return (
     <div>
       <ChallengeForm
         challenge={props.challenge}
-        onSubmit={challenge => {
+        onSubmit={(challenge) => {
           props.dispatch(updateChallenge(props.challenge.id, challenge))
-          props.history.push("/challenges")
+          props.history.push("/dashboard")
         }}
         props={props}
       />
@@ -24,7 +24,7 @@ const EditChallenge = props => {
         size='sm'
         onClick={() => {
           props.dispatch(removeChallenge({ id: props.challenge.id }))
-          props.history.push("/challenges")
+          props.history.push("/dashboard")
         }}
       >
         Delete
@@ -35,9 +35,9 @@ const EditChallenge = props => {
 
 const mapStateToProps = (state, props) => {
   return {
-    challenge: state.challenges.find(challenge => {
+    challenge: state.challenges.find((challenge) => {
       return challenge.id === props.match.params.id
-    })
+    }),
   }
 }
 

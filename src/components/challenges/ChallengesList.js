@@ -4,14 +4,20 @@ import "moment-timezone"
 import ChallengeListItem from "./ChallengeListItem"
 import { getVisibleItems } from "../../utilities/Utils"
 import ChallengeListFilters from "./ChallengeListFilters"
+import { Card } from "react-bootstrap"
 
 function ChallengesList(props) {
   return (
     <div>
       <ChallengeListFilters />
-      {props.challenges.map((challenge) => {
-        return <ChallengeListItem key={challenge.id} {...challenge} />
-      })}
+      <Card style={{ marginBottom: "2rem" }}>
+        <Card.Header>Featured</Card.Header>
+        <Card.Body>
+          {props.challenges.map((challenge) => {
+            return <ChallengeListItem key={challenge.id} {...challenge} />
+          })}
+        </Card.Body>
+      </Card>
     </div>
   )
 }
