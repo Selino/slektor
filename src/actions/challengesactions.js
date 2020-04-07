@@ -22,7 +22,6 @@ export const createChallenge = ({
     bookID,
     bookThumbnail,
     bookTitle,
-    bookThumbnail,
     amount,
     startDate,
     endDate,

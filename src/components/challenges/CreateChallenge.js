@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import ChallengeForm from "./ChallengeForm"
 import { connect } from "react-redux"
 import { createChallenge } from "../../actions/challengesactions"

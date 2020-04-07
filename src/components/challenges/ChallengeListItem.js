@@ -36,19 +36,11 @@ const ChallengeListItem = (props) => {
           Ends : &nbsp;
           <strong>{moment(endDate).format("MMMM Do YYYY")}</strong>
         </div>
-        <Card.Text>
-          <Image
-            rounded
-            src={bookThumbnail}
-            style={{ float: "left", marginRight: "2rem", marginBottom: "1rem" }}
-          />
-          Etiam sagittis id diam ac rhoncus. Suspendisse ut rhoncus enim. Morbi
-          vehicula sodales nibh quis mattis. Vestibulum et justo vitae odio
-          aliquam suscipit eget eget ipsum. Cras facilisis leo nec sapien
-          cursus, id condimentum elit dignissim. Maecenas finibus sed justo quis
-          varius. Phasellus finibus arcu a velit pellentesque, pellentesque
-          maximus lectus facilisis. Sed eu hendrerit risus.
-        </Card.Text>
+        <Image
+          rounded
+          src={bookThumbnail}
+          style={{ float: "left", marginRight: "2rem", marginBottom: "1rem" }}
+        />
 
         <div className='row'>
           <div className='col-sm-12'>

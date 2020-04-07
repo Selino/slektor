@@ -1,5 +1,3 @@
-import { bindActionCreators } from "redux"
-
 export const sendBookSearch = (string = "Hobbit") => {
   return (dispatch) => {
     fetch(
