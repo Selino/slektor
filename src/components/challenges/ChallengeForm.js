@@ -11,6 +11,7 @@ import moment from "moment"
 import "react-dates/initialize"
 import { SingleDatePicker } from "react-dates"
 import "react-dates/lib/css/_datepicker.css"
+import { Link } from "react-router-dom"
 
 function ChallengeForm(props) {
   const [state, setState] = useState({
@@ -110,6 +111,14 @@ function ChallengeForm(props) {
         </Form.Group>
 
         <Button type='submit'>Save</Button>
+        <Link
+          style={{ marginLeft: ".5rem" }}
+          to={{
+            pathname: "/dashboard",
+          }}
+        >
+          <Button variant='secondary'>Cancel</Button>
+        </Link>
       </Form>
     </div>
   )

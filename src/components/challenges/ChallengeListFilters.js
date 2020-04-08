@@ -5,13 +5,13 @@ import {
   sortByDate,
   sortByAmount,
   setStartDate,
-  setEndDate
+  setEndDate,
 } from "../../actions/filtersactions"
 import { DateRangePicker } from "react-dates"
 
-const ChallengeListFilters = props => {
+const ChallengeListFilters = (props) => {
   const [state, setState] = useState({
-    calendarFocused: null
+    calendarFocused: null,
   })
 
   const onDatesChange = ({ startDate, endDate }) => {
@@ -19,24 +19,24 @@ const ChallengeListFilters = props => {
     props.dispatch(setEndDate(endDate))
   }
 
-  const onFocusChange = calendarFocused => {
+  const onFocusChange = (calendarFocused) => {
     setState(() => ({ calendarFocused }))
   }
 
   return (
     <div style={{ marginBottom: ".5rem" }}>
       <input
-        style={{ verticalAlign: "middle", padding: ".25rem" }}
+        style={{ verticalAlign: "top", padding: ".25rem" }}
         placeholder='Filter by title'
         type='text'
         value={props.filters.text}
-        onChange={e => {
+        onChange={(e) => {
           props.dispatch(setTextFilter(e.target.value))
         }}
       />
       <select
         value={props.filters.sortBy}
-        onChange={e => {
+        onChange={(e) => {
           if (e.target.value === "date") {
             props.dispatch(sortByDate())
           } else if (e.target.value === "amount") {
@@ -44,9 +44,10 @@ const ChallengeListFilters = props => {
           }
         }}
         style={{
-          verticalAlign: "middle",
+          verticalAlign: "top",
           width: "8rem",
-          margin: ".5rem"
+          marginLeft: ".5rem",
+          marginBottom: ".5rem",
         }}
         className='browser-default custom-select'
       >
@@ -69,9 +70,9 @@ const ChallengeListFilters = props => {
   )
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    filters: state.filters
+    filters: state.filters,
   }
 }
 

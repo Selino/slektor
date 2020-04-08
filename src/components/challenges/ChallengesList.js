@@ -9,7 +9,7 @@ import ChallengeTotalBids from "./ChallengeTotalBids"
 
 function ChallengesList(props) {
   return (
-    <div>
+    <>
       <ChallengeListFilters />
       <Card style={{ marginBottom: "2rem" }}>
         <Card.Header>
@@ -24,7 +24,7 @@ function ChallengesList(props) {
           })}
         </Card.Body>
       </Card>
-    </div>
+    </>
   )
 }
 
