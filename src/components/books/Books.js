@@ -3,6 +3,8 @@ import { Form, Button, InputGroup, FormControl, Alert } from "react-bootstrap"
 import BookList from "./BookList"
 import { sendBookSearch } from "../../actions/booksactions"
 import { useSelector, useDispatch } from "react-redux"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 const Books = (props) => {
   const books = useSelector((state) => state.books)
@@ -37,12 +39,11 @@ const Books = (props) => {
             placeholder='Search for book title'
             defaultValue={searchText}
             name='Search'
-            style={{ width: "60%" }}
-            autoFocus
+            style={{ width: "60%", borderRadius: "20px 0 0 20px" }}
           />
           <InputGroup.Append>
-            <Button variant='primary' type='Submit' size='sm'>
-              Search
+            <Button variant='secondary' type='Submit'>
+              <FontAwesomeIcon icon={faSearch} />
             </Button>
           </InputGroup.Append>
         </InputGroup>
