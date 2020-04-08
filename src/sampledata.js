@@ -95,6 +95,8 @@ export const getSampleData = () => ({
           smallThumbnail:
             "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         },
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet porttitor ornare. Nam maximus id dolor vel rhoncus. In non fermentum nunc. Vestibulum gravida justo sollicitudin tellus suscipit convallis. Vestibulum faucibus consectetur erat, ut bibendum nisl commodo eu. Proin cursus diam ante, nec viverra neque hendrerit in. Aliquam erat volutpat. Integer et eros varius, mollis dolor tempor, tincidunt dolor. Donec porta lacinia sodales. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ultrices pretium justo, vel auctor nunc viverra sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tempus tellus sed ultricies sodales. Quisque nec placerat tortor. Sed libero ante, dictum a libero sed, semper efficitur tellus. Ut vel consequat libero. Nam ut accumsan arcu. Nam eu mauris sit amet libero auctor accumsan dapibus quis arcu. Nulla sit amet libero placerat, tempor dolor in, auctor urna. Duis lobortis sit amet augue nec ultrices. Vivamus in lectus facilisis, pharetra enim eget, suscipit nisl. Aliquam erat volutpat.",
       },
     },
     {
@@ -106,6 +108,8 @@ export const getSampleData = () => ({
           smallThumbnail:
             "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         },
+        description:
+          "Fusce nisl nunc, blandit sit amet purus nec, cursus facilisis nibh. Maecenas nisi odio, porttitor nec vestibulum eget, aliquam id nisi. Sed euismod porttitor consectetur. Duis cursus orci massa, non cursus sem imperdiet eget. Aliquam tortor mauris, sagittis ac urna vitae, pellentesque luctus ligula. Donec sed bibendum ligula. Nullam at luctus erat. Nulla facilisi. Aliquam sodales diam tellus, vitae aliquet dui fermentum id. Donec non elementum felis. Vestibulum pharetra porta libero sed pretium.",
       },
     },
     {
@@ -128,6 +132,8 @@ export const getSampleData = () => ({
           smallThumbnail:
             "http://books.google.com/books/content?id=KY0BDObXftUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         },
+        description:
+          "Ut dictum ut justo vitae laoreet. Pellentesque libero tortor, volutpat sit amet dapibus at, congue eu turpis. Nam sollicitudin purus quis vulputate laoreet. Suspendisse ornare eros mi, eget faucibus libero consectetur sed. Suspendisse non vehicula urna. Morbi vitae tortor posuere lorem aliquam scelerisque ac quis arcu. Fusce sit amet dolor quis mi ultrices facilisis nec id orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor posuere lacus in dapibus.",
       },
     },
     {

@@ -22,7 +22,7 @@ function BookList(props) {
         >
           <Button
             className='btnBooksCreateChallenge'
-            variant='primary'
+            variant='outline-secondary'
             size='sm'
           >
             Create Challenge
@@ -30,17 +30,17 @@ function BookList(props) {
         </Link>
         {book.volumeInfo.imageLinks !== undefined && (
           <img
-            className='book-thumbnail'
+            className='book-thumbnail-lg'
             alt={book.volumeInfo.title}
             src={book.volumeInfo.imageLinks.smallThumbnail}
           />
         )}
-        <h2>{book.volumeInfo.title}</h2>
-        <h4>
+        <p className='book-title'>{book.volumeInfo.title}</p>
+        <p className='book-authors'>
           {!book.volumeInfo.authors
             ? ""
             : book.volumeInfo.authors.map((author) => author)}
-        </h4>
+        </p>
         <p>{book.volumeInfo.description}</p>
       </Card.Body>
     </Card>
