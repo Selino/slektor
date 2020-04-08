@@ -6,7 +6,7 @@ import ChallengesList from "../challenges/ChallengesList"
 export default function Dashboard() {
   return (
     <Row>
-      <Col xs={12} sm={6}>
+      <Col xs={12} md={6}>
         <Books />
       </Col>
       <Col>

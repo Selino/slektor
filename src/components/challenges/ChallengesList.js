@@ -5,13 +5,19 @@ import ChallengeListItem from "./ChallengeListItem"
 import { getVisibleItems } from "../../utilities/Utils"
 import ChallengeListFilters from "./ChallengeListFilters"
 import { Card } from "react-bootstrap"
+import ChallengeTotalBids from "./ChallengeTotalBids"
 
 function ChallengesList(props) {
   return (
     <div>
       <ChallengeListFilters />
       <Card style={{ marginBottom: "2rem" }}>
-        <Card.Header>Featured</Card.Header>
+        <Card.Header>
+          Featured
+          <div className='challenges-total'>
+            Total (<ChallengeTotalBids Challenges={props.challenges} />)
+          </div>
+        </Card.Header>
         <Card.Body>
           {props.challenges.map((challenge) => {
             return <ChallengeListItem key={challenge.id} {...challenge} />
