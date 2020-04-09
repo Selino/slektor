@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, Button } from "react-bootstrap"
+import { Card, Button, Image } from "react-bootstrap"
 import "./books.sass"
 import { Link } from "react-router-dom"
 
@@ -29,7 +29,8 @@ function BookList(props) {
           </Button>
         </Link>
         {book.volumeInfo.imageLinks !== undefined && (
-          <img
+          <Image
+            rounded
             className='book-thumbnail-lg'
             alt={book.volumeInfo.title}
             src={book.volumeInfo.imageLinks.smallThumbnail}

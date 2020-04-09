@@ -2,18 +2,19 @@ import React from "react"
 import Books from "../books/Books"
 import { Row, Col } from "react-bootstrap"
 import ChallengesList from "../challenges/ChallengesList"
-import StatOne from "./StatOne"
-import StatTwo from "./StatTwo"
-import StatThree from "./StatThree"
+import TotalAmount from "./TotalAmount"
+import TotalActive from "./TotalActive"
+import MostLucrative from "./MostLucrative"
+import { connect } from "react-redux"
 
-export default function Dashboard() {
+function Dashboard(props) {
   return (
     <>
       <Row>
         <Col sm={12} lg={2}>
-          <StatOne />
-          <StatTwo />
-          <StatThree />
+          <TotalAmount Challenges={props.challenges} />
+          <TotalActive Challenges={props.challenges} />
+          <MostLucrative Challenges={props.challenges} />
         </Col>
         <Col sm={12} lg={6}>
           <Books />
@@ -25,3 +26,11 @@ export default function Dashboard() {
     </>
   )
 }
+
+const mapStateToProps = (state) => {
+  return {
+    challenges: state.challenges,
+  }
+}
+
+export default connect(mapStateToProps)(Dashboard)
