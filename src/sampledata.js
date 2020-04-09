@@ -64,10 +64,10 @@ export const getSampleData = () => ({
       id: "2",
       owner: "Steve Jang",
       status: "running",
-      bookID: "H8ON-dTgQQYC",
-      bookTitle: "Kama Pootra",
+      bookID: "KY0BDObXftUC",
+      bookTitle: "Exploring J.R.R. Tolkien's The Hobbit",
       bookThumbnail:
-        "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "http://books.google.com/books/content?id=KY0BDObXftUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 300,
       startDate: moment(1580562000000),
       endDate: moment(1585746000000),

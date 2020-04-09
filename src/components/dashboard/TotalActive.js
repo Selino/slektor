@@ -2,7 +2,7 @@ import React from "react"
 import { Card } from "react-bootstrap"
 import "./dashboard.sass"
 
-export default function StatTwo(props) {
+export default function TotalActive(props) {
   return (
     <Card className='stat-card'>
       <Card.Body>

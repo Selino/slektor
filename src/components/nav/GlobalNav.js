@@ -16,14 +16,10 @@ export default function globalNav() {
       <Navbar.Brand>
         <img
           alt={process.env.REACT_APP_TITLE}
-          src={logo}
-          className='d-inline-block App-logo'
-        />
-        <img
-          alt={process.env.REACT_APP_TITLE}
           src={mark}
-          className='d-inline-block'
+          className='d-inline-block service-mark'
         />
+        <strong className='tag-line'>[ the lucrative reading app ]</strong>
       </Navbar.Brand>
     </Navbar>
   )

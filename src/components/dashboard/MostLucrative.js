@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap"
 import "./dashboard.sass"
 import { getVisibleItems } from "../../utilities/Utils"
 
-export default function StatThree(props) {
+export default function MostLucrative(props) {
   const highestItem = getVisibleItems(props.Challenges, {
     sortBy: "amount",
     text: "",

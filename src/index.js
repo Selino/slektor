@@ -1,12 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "./index.sass"
 import * as serviceWorker from "./serviceWorker"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Provider } from "react-redux"
 import configureStore from "./store/configureStore"
 import "moment-timezone"
 import AppRouter from "./routers/AppRouter"
+import "./index.sass"
 
 const store = configureStore()
 
