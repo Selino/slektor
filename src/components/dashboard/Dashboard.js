@@ -11,15 +11,15 @@ function Dashboard(props) {
   return (
     <>
       <Row>
-        <Col sm={12} lg={2}>
+        <Col sm={12} md={4} lg={2}>
           <TotalAmount Challenges={props.challenges} />
           <TotalActive Challenges={props.challenges} />
           <MostLucrative Challenges={props.challenges} />
         </Col>
-        <Col sm={12} lg={6}>
+        <Col sm={12} md={8} lg={5}>
           <Books />
         </Col>
-        <Col sm={12} lg={4}>
+        <Col sm={12} lg={5}>
           <ChallengesList />
         </Col>
       </Row>
