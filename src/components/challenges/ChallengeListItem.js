@@ -30,7 +30,7 @@ const ChallengeListItem = (props) => {
 
         <Col>
           <Link to={`/edit/${id}`}>
-            <Button size='sm' variant='outline-secondary'>
+            <Button size='sm' variant='' className='text-secondary'>
               <FontAwesomeIcon icon={faEdit} />
             </Button>
           </Link>
