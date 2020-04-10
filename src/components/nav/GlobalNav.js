@@ -3,6 +3,8 @@ import { Navbar } from "react-bootstrap"
 import mark from "../../slektor-mark.svg"
 import "./GlobalNav.sass"
 import InfoModal from "./InfoModal"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBookReader } from "@fortawesome/pro-duotone-svg-icons"
 
 export default function globalNav() {
   return (
@@ -14,12 +16,12 @@ export default function globalNav() {
       expand='lg'
     >
       <Navbar.Brand>
+        <FontAwesomeIcon className='app-logo' size='2x' icon={faBookReader} />
         <img
           alt={process.env.REACT_APP_TITLE}
           src={mark}
           className='d-inline-block service-mark'
         />
-        <strong className='tag-line'>[ the lucrative reading app ]</strong>
       </Navbar.Brand>
       <InfoModal />
     </Navbar>
