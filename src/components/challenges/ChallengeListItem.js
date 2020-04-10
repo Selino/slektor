@@ -24,7 +24,7 @@ const ChallengeListItem = (props) => {
             {Dinero({
               amount: amount,
               currency: "USD",
-            }).toFormat("$0,0.00")}
+            }).toFormat("$0,0")}
           </p>
         </Col>
 

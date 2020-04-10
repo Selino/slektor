@@ -12,7 +12,7 @@ export default function ChallengeTotalBids(props) {
       {Dinero({
         amount: totalAmount,
         currency: "USD",
-      }).toFormat("$0,0.00")}
+      }).toFormat("$0,0")}
     </>
   )
 }
