@@ -47,7 +47,7 @@ function BookList(props) {
     </Card>
   ))
 
-  return <div className='book-list scrolling'>{bookItems}</div>
+  return <div className='book-list'>{bookItems}</div>
 }
 
 export default BookList

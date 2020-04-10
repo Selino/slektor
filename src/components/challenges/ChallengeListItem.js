@@ -12,14 +12,14 @@ const ChallengeListItem = (props) => {
   return (
     <Container className='challenge-item'>
       <Row>
-        <Col>
+        <Col xs={3} sm={2}>
           <Image rounded className='book-thumbnail' src={bookThumbnail} />
         </Col>
-        <Col sm={4}>
+        <Col xs={9} sm={6}>
           <p className='book-title'>{bookTitle}</p>
           <p className='date'>{moment(endDate).format("MMMM Do YYYY")}</p>
         </Col>
-        <Col>
+        <Col xs={6} sm={2}>
           <p className='amount'>
             {Dinero({
               amount: amount,
