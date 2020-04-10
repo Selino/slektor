@@ -19,16 +19,16 @@ export default function InfoModal() {
           <Modal.Title>What is slektor?</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Aenean lacinia, ligula sit amet dignissim ultricies, mauris tortor
-          vulputate erat, non fermentum odio nulla sit amet eros. Duis sit amet
-          dui congue, ultricies quam bibendum, faucibus felis. Quisque lobortis
-          leo sit amet laoreet imperdiet. Nunc viverra id nibh vel tincidunt.
-          Vivamus cursus molestie urna sed malesuada. Maecenas ac ligula
-          fermentum, venenatis diam placerat, euismod odio. Mauris facilisis
-          quis eros nec commodo. Proin tempor justo velit, sed tempus neque
-          pharetra in. Ut hendrerit neque est, tincidunt sollicitudin ipsum
-          rhoncus ac. Pellentesque dui mi, lacinia eu auctor in, lobortis non
-          felis. Phasellus consectetur eget ex varius viverra.
+          <p>
+            Slektor is an app that lets kids fund their reading habits. By
+            allowing friends and family to contribute to "Kickstarter like"
+            reading challenges, we're making reading as lucrative as it is fun.
+          </p>
+          <p>
+            The project is currently in a proof of concept phase and we plan to
+            move into a Beta period in the coming months. Check back often as we
+            add functionality.
+          </p>
         </Modal.Body>
       </Modal>
     </>
