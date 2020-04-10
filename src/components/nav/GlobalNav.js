@@ -7,7 +7,7 @@ import InfoModal from "./InfoModal"
 export default function globalNav() {
   return (
     <Navbar
-      className='GlobalNav'
+      className='GlobalNav d-flex justify-content-between'
       fixed='top'
       bg='light'
       variant='light'
@@ -21,9 +21,7 @@ export default function globalNav() {
         />
         <strong className='tag-line'>[ the lucrative reading app ]</strong>
       </Navbar.Brand>
-      <Navbar.Collapse className='justify-content-end'>
-        <InfoModal />
-      </Navbar.Collapse>
+      <InfoModal />
     </Navbar>
   )
 }

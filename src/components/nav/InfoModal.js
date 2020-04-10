@@ -11,7 +11,7 @@ export default function InfoModal() {
   return (
     <>
       <Button size='' variant='link' onClick={handleShow}>
-        <FontAwesomeIcon icon={faQuestionCircle} />
+        <FontAwesomeIcon size='lg' icon={faQuestionCircle} />
       </Button>
 
       <Modal show={show} onHide={handleClose}>
