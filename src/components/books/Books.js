@@ -4,7 +4,7 @@ import BookList from "./BookList"
 import { sendBookSearch } from "../../actions/booksactions"
 import { useSelector, useDispatch } from "react-redux"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { faSearch } from "@fortawesome/pro-regular-svg-icons"
 
 const Books = (props) => {
   const books = useSelector((state) => state.books)

@@ -5,7 +5,7 @@ import moment from "moment"
 import { Link } from "react-router-dom"
 import "./challenges.sass"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faEdit } from "@fortawesome/free-solid-svg-icons"
+import { faEdit } from "@fortawesome/pro-regular-svg-icons"
 
 const ChallengeListItem = (props) => {
   const { id, amount, bookTitle, endDate, bookThumbnail } = props
