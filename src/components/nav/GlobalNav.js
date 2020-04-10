@@ -1,8 +1,8 @@
 import React from "react"
 import { Navbar } from "react-bootstrap"
-import logo from "../../logo.svg"
 import mark from "../../slektor-mark.svg"
 import "./GlobalNav.sass"
+import InfoModal from "./InfoModal"
 
 export default function globalNav() {
   return (
@@ -21,6 +21,9 @@ export default function globalNav() {
         />
         <strong className='tag-line'>[ the lucrative reading app ]</strong>
       </Navbar.Brand>
+      <Navbar.Collapse className='justify-content-end'>
+        <InfoModal />
+      </Navbar.Collapse>
     </Navbar>
   )
 }
