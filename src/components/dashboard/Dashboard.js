@@ -17,10 +17,10 @@ function Dashboard(props) {
           <MostLucrative Challenges={props.challenges} />
         </Col>
         <Col sm={12} md={8} lg={5}>
-          <Books />
+          <ChallengesList />
         </Col>
         <Col sm={12} lg={5}>
-          <ChallengesList />
+          <Books />
         </Col>
       </Row>
     </>
