@@ -11,7 +11,7 @@ function ChallengesList(props) {
   return (
     <>
       <ChallengeListFilters />
-      <Card style={{ marginBottom: "2rem" }}>
+      <Card>
         <Card.Header>
           Featured
           <div className='challenges-total'>
@@ -24,6 +24,7 @@ function ChallengesList(props) {
           })}
         </Card.Body>
       </Card>
+      <br />
     </>
   )
 }

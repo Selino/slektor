@@ -1,5 +1,5 @@
 .book-list
-    overflow: auto
+
     .card
         margin-bottom: 1rem
 
@@ -14,7 +14,18 @@
     .book-title, .book-authors
         margin: 0
         font-weight: 600
+
     .book-authors
         font-size: .83rem
         color: #9da9bb!important
         margin-bottom: 1rem
+
+@media screen and (min-width: 992px)
+    .book-list
+        height: 88vmax
+        padding-right: 16px
+
+@media screen and (min-width: 1200px)
+    .book-list
+        height: 64vmax
+        padding-right: 16px

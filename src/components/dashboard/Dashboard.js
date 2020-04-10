@@ -19,7 +19,7 @@ function Dashboard(props) {
         <Col sm={12} md={8} lg={5}>
           <ChallengesList />
         </Col>
-        <Col sm={12} lg={5}>
+        <Col sm={12} md={12} lg={5}>
           <Books />
         </Col>
       </Row>

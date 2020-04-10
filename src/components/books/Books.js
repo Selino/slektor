@@ -31,7 +31,7 @@ const Books = (props) => {
   useEffect(() => {}, [])
 
   return (
-    <div>
+    <>
       <Form id='book-search-form' onSubmit={handleSubmit}>
         <InputGroup className='mb-3'>
           <FormControl
@@ -52,7 +52,7 @@ const Books = (props) => {
         {error && <Alert variant='danger'>{error}</Alert>}
       </Form>
       <BookList Books={books} />
-    </div>
+    </>
   )
 }
 

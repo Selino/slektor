@@ -7,14 +7,21 @@ body
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
 
+// utility
+.scrolling
+  overflow: scroll
+
 // Bootstrap reset
 .card
-  box-shadow: 0 7px 14px 0 rgba(65,69,88,.1),0 3px 6px 0 rgba(0,0,0,.07)
+  box-shadow: 3px 3px 0px 0 rgba(65,69,88,.1)
   border: none
 
 .card-header
   font-weight: 600
   font-size: .83rem
 
-.bg-light
-  // background-color: #EAF0F8!important
+@media screen and (min-width: 992px)
+  html, body
+    margin: 0
+    height: 100%
+    overflow: hidden
