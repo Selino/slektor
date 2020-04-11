@@ -13,13 +13,13 @@ function Dashboard(props) {
       <Row>
         <Col sm={12} md={4} lg={2}>
           <Row>
-            <Col>
+            <Col xs={12}>
               <TotalAmount Challenges={props.challenges} />
             </Col>
-            <Col>
+            <Col xs={12}>
               <TotalActive Challenges={props.challenges} />
             </Col>
-            <Col>
+            <Col xs={12}>
               <MostLucrative Challenges={props.challenges} />
             </Col>
           </Row>
