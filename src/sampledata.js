@@ -53,9 +53,9 @@ export const getSampleData = () => ({
       owner: "John Doe",
       status: "running",
       bookID: "xIItr7-StUEC",
-      bookTitle: "The Hobbit",
+      bookTitle: "Catch-22",
       bookThumbnail:
-        "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+        "http://books.google.com/books/content?id=Xfze51E7TEoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
       amount: 500,
       startDate: moment(1583326800000),
       endDate: moment(1588338000000),
@@ -84,67 +84,59 @@ export const getSampleData = () => ({
       startDate: moment(1583067600000),
       endDate: moment(1586955600000),
     },
+
+    {
+      id: "4",
+      owner: "Carol Johnson",
+      status: "running",
+      bookID: "H8ON-ffdf",
+      bookTitle: "It Hurts when I Poop!",
+      bookThumbnail:
+        "http://books.google.com/books/content?id=I8YWAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+      amount: 200,
+      startDate: moment(1585067603000),
+      endDate: moment(1588955603000),
+    },
   ],
   items: [
     {
       id: "pD6arNyKyi8C",
       volumeInfo: {
-        title: "The Hobbit",
-        authors: ["J.R.R. Tolkien"],
+        title: "Pirates",
+        authors: ["John Reeve Carpenter"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=pD6arNyKyi8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "http://books.google.com/books/content?id=eH7nwjpzHrEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         },
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In imperdiet porttitor ornare. Nam maximus id dolor vel rhoncus. In non fermentum nunc. Vestibulum gravida justo sollicitudin tellus suscipit convallis. Vestibulum faucibus consectetur erat, ut bibendum nisl commodo eu. Proin cursus diam ante, nec viverra neque hendrerit in. Aliquam erat volutpat. Integer et eros varius, mollis dolor tempor, tincidunt dolor. Donec porta lacinia sodales. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis ultrices pretium justo, vel auctor nunc viverra sit amet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec tempus tellus sed ultricies sodales. Quisque nec placerat tortor. Sed libero ante, dictum a libero sed, semper efficitur tellus. Ut vel consequat libero. Nam ut accumsan arcu. Nam eu mauris sit amet libero auctor accumsan dapibus quis arcu. Nulla sit amet libero placerat, tempor dolor in, auctor urna. Duis lobortis sit amet augue nec ultrices. Vivamus in lectus facilisis, pharetra enim eget, suscipit nisl. Aliquam erat volutpat.",
+          "Looks at the history of pirates, discussing life aboard ship, battle tactics, weapons, and flags as well as such well-known pirates as Sir Francis Drake, Henry Morgan, and William Kidd.",
       },
     },
     {
       id: "hFfhrCWiLSMC",
       volumeInfo: {
-        title: "The Hobbit, Or, There and Back Again",
-        authors: ["John Ronald Reuel Tolkien"],
+        title:
+          "Last Week Tonight with John Oliver Presents a Day in the Life of Marlon Bundo",
+        authors: ["Marlon Bundo"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=hFfhrCWiLSMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "http://books.google.com/books/content?id=mvlRDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         },
         description:
-          "Fusce nisl nunc, blandit sit amet purus nec, cursus facilisis nibh. Maecenas nisi odio, porttitor nec vestibulum eget, aliquam id nisi. Sed euismod porttitor consectetur. Duis cursus orci massa, non cursus sem imperdiet eget. Aliquam tortor mauris, sagittis ac urna vitae, pellentesque luctus ligula. Donec sed bibendum ligula. Nullam at luctus erat. Nulla facilisi. Aliquam sodales diam tellus, vitae aliquet dui fermentum id. Donec non elementum felis. Vestibulum pharetra porta libero sed pretium.",
+          "100% of Last Week Tonight's proceeds will be donated to The Trevor Project and AIDS United. HBO's Emmy-winning Last Week Tonight with John Oliver presents a children's picture book about a Very Special boy bunny who falls in love with another boy bunny. Meet Marlon Bundo, a lonely bunny who lives with his Grampa, Mike Pence - the Vice President of the United States. But on this Very Special Day, Marlon's life is about to change forever... With its message of tolerance and advocacy, this charming children's book explores issues of same sex marriage and democracy. Sweet, funny, and beautifully illustrated, this book is dedicated to every bunny who has ever felt different.",
       },
     },
     {
       id: "H8ON-dTgQQYC",
       volumeInfo: {
-        title: "The Hobbit",
-        authors: ["Jude Fisher"],
+        title: "Everything You Need to Ace Math in One Big Fat Notebook",
+        authors: ["Workman Publishing"],
         imageLinks: {
           smallThumbnail:
-            "http://books.google.com/books/content?id=H8ON-dTgQQYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        },
-      },
-    },
-    {
-      id: "KY0BDObXftUC",
-      volumeInfo: {
-        title: "Exploring J.R.R. Tolkien's The Hobbit",
-        authors: ["Corey Olsen"],
-        imageLinks: {
-          smallThumbnail:
-            "http://books.google.com/books/content?id=KY0BDObXftUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+            "http://books.google.com/books/content?id=csVKDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
         },
         description:
-          "Ut dictum ut justo vitae laoreet. Pellentesque libero tortor, volutpat sit amet dapibus at, congue eu turpis. Nam sollicitudin purus quis vulputate laoreet. Suspendisse ornare eros mi, eget faucibus libero consectetur sed. Suspendisse non vehicula urna. Morbi vitae tortor posuere lorem aliquam scelerisque ac quis arcu. Fusce sit amet dolor quis mi ultrices facilisis nec id orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tempor posuere lacus in dapibus.",
-      },
-    },
-    {
-      id: "N_0VhzQKIIAC",
-      volumeInfo: {
-        title: "Finding God in the Hobbit",
-        authors: ["Jim Ware"],
-        imageLinks: {
-          smallThumbnail:
-            "http://books.google.com/books/content?id=N_0VhzQKIIAC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        },
+          "It’s the revolutionary math study guide just for middle school students from the brains behind Brain Quest. Everything You Need to Ace Math . . . covers everything to get a student over any math hump: fractions, decimals, and how to multiply and divide them; ratios, proportions, and percentages; geometry; statistics and probability; expressions and equations; and the coordinate plane and functions. The BIG FAT NOTEBOOK™ series is built on a simple and irresistible conceit—borrowing the notes from the smartest kid in class. There are five books in all, and each is the only book you need for each main subject taught in middle school: Math, Science, American History, English Language Arts, and World History. Inside the reader will find every subject’s key concepts, easily digested and summarized: Critical ideas highlighted in neon colors. Definitions explained. Doodles that illuminate tricky concepts in marker. Mnemonics for memorable shortcuts. And quizzes to recap it all. The BIG FAT NOTEBOOKS meet Common Core State Standards, Next Generation Science Standards, and state history standards, and are vetted by National and State Teacher of the Year Award–winning teachers. They make learning fun and are the perfect next step for every kid who grew up on Brain Quest.",
       },
     },
   ],
