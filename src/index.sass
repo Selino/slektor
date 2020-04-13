@@ -1,8 +1,24 @@
+@import "./settings"
+
 body
   margin: 0
   font-family: Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  background-color: #fff
+  color: $textColor
+
+.app-body
+  padding: 1rem
+  margin-top: 80px
+
+  @media only screen and (max-width: 600px)
+    padding-top: 0px
+  @media only screen and (min-width: 992px)
+    padding-top: 0px
+
+.App-link
+  color: #61dafb
 
 code
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace
@@ -11,11 +27,27 @@ code
 .scrolling
   overflow: scroll
 
+.cursor
+  cursor: pointer
+
+.DateRangePickerInput
+  background-color: $bodyComplimentary
+  border: none
+
+.DateInput, .DateInput_input
+  background-color: $bodyComplimentary
+  color: $textColor
+
 // Bootstrap reset
 .card
-  box-shadow: 3px 3px 0px 0 rgba(65,69,88,.1)
+  box-shadow: none
   border: none
 
 .card-header
   font-weight: 600
   font-size: .83rem
+
+.form-control
+  border: none
+  color: $textColor
+  background-color: #fff

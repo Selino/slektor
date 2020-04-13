@@ -10,9 +10,12 @@ export default function InfoModal() {
   const handleShow = () => setShow(true)
   return (
     <>
-      <Button size='' variant='link' onClick={handleShow}>
-        <FontAwesomeIcon size='lg' icon={faQuestionCircle} />
-      </Button>
+      <FontAwesomeIcon
+        onClick={handleShow}
+        size='lg'
+        className='cursor'
+        icon={faQuestionCircle}
+      />
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
