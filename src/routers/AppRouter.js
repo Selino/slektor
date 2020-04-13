@@ -7,7 +7,6 @@ import GlobalNav from "../components/nav/GlobalNav"
 import ChallengesList from "../components/challenges/ChallengesList"
 import EditChallenge from "../components/challenges/EditChallenge"
 import Dashboard from "../components/dashboard/Dashboard"
-import "../App.sass"
 
 const AppRouter = () => (
   <BrowserRouter>

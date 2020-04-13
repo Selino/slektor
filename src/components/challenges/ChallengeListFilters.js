@@ -30,9 +30,6 @@ const ChallengeListFilters = (props) => {
         <Col xs={12} sm={6}>
           <Form.Group>
             <FormControl
-              style={{
-                padding: ".25rem",
-              }}
               placeholder='Filter by title'
               type='text'
               value={props.filters.text}

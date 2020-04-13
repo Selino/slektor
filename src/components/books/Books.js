@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react"
-import { Form, Button, InputGroup, FormControl, Alert } from "react-bootstrap"
+import {
+  Form,
+  Button,
+  InputGroup,
+  FormControl,
+  Alert,
+  Card,
+} from "react-bootstrap"
 import BookList from "./BookList"
 import { sendBookSearch } from "../../actions/booksactions"
 import { useSelector, useDispatch } from "react-redux"
@@ -31,28 +38,29 @@ const Books = (props) => {
   useEffect(() => {}, [])
 
   return (
-    <>
-      <Form id='book-search-form' onSubmit={handleSubmit}>
-        <InputGroup className='mb-3'>
-          <FormControl
-            type='text'
-            onChange={onSearchTextChange}
-            aria-label='Search for book title'
-            placeholder='Search for book title'
-            defaultValue={searchText}
-            name='Search'
-            style={{ width: "60%" }}
-          />
-          <InputGroup.Append>
-            <Button variant='secondary' type='Submit' id='search-button'>
-              <FontAwesomeIcon icon={faSearch} />
-            </Button>
-          </InputGroup.Append>
-        </InputGroup>
-        {error && <Alert variant='danger'>{error}</Alert>}
-      </Form>
-      <BookList Books={books} />
-    </>
+    <Card className='books-list' style={{ backgroundColor: "#E5E5E5" }}>
+      <Card.Body>
+        <Form id='book-search-form' onSubmit={handleSubmit}>
+          <InputGroup className='mb-3'>
+            <FormControl
+              type='text'
+              onChange={onSearchTextChange}
+              aria-label='Search for book title'
+              placeholder='Search for book title'
+              defaultValue={searchText}
+              name='Search'
+            />
+            <InputGroup.Append>
+              <Button variant='secondary' type='Submit' id='search-button'>
+                <FontAwesomeIcon icon={faSearch} />
+              </Button>
+            </InputGroup.Append>
+          </InputGroup>
+          {error && <Alert variant='danger'>{error}</Alert>}
+        </Form>
+        <BookList Books={books} />
+      </Card.Body>
+    </Card>
   )
 }
 

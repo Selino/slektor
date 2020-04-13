@@ -23,7 +23,6 @@ function Dashboard(props) {
               <MostLucrative Challenges={props.challenges} />
             </Col>
           </Row>
-          <br />
         </Col>
         <Col sm={12} md={8} lg={5}>
           <ChallengesList />
