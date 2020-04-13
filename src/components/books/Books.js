@@ -38,7 +38,7 @@ const Books = (props) => {
   useEffect(() => {}, [])
 
   return (
-    <Card style={{ backgroundColor: "#E5E5E5" }}>
+    <Card className='books-list' style={{ backgroundColor: "#E5E5E5" }}>
       <Card.Body>
         <Form id='book-search-form' onSubmit={handleSubmit}>
           <InputGroup className='mb-3'>
