@@ -9,23 +9,24 @@ import ChallengeTotalBids from "./ChallengeTotalBids"
 
 function ChallengesList(props) {
   return (
-    <>
-      <ChallengeListFilters />
-      <Card>
-        <Card.Header>
-          Featured
-          <div className='challenges-total'>
-            Total (<ChallengeTotalBids Challenges={props.challenges} />)
-          </div>
-        </Card.Header>
-        <Card.Body>
-          {props.challenges.map((challenge) => {
-            return <ChallengeListItem key={challenge.id} {...challenge} />
-          })}
-        </Card.Body>
-      </Card>
-      <br />
-    </>
+    <Card style={{ backgroundColor: "#E5E5E5" }}>
+      <Card.Body>
+        <ChallengeListFilters />
+        <Card>
+          <Card.Header>
+            Featured
+            <div className='challenges-total'>
+              Total (<ChallengeTotalBids Challenges={props.challenges} />)
+            </div>
+          </Card.Header>
+          <Card.Body>
+            {props.challenges.map((challenge) => {
+              return <ChallengeListItem key={challenge.id} {...challenge} />
+            })}
+          </Card.Body>
+        </Card>
+      </Card.Body>
+    </Card>
   )
 }
 

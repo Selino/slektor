@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faQuestionCircle } from "@fortawesome/pro-regular-svg-icons"
-import { Button, Modal } from "react-bootstrap"
+import { Modal } from "react-bootstrap"
 
 export default function InfoModal() {
   const [show, setShow] = useState(false)
