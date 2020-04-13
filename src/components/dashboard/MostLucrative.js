@@ -11,8 +11,8 @@ export default function MostLucrative(props) {
   return (
     <Card className='stat-card'>
       <Card.Body>
-        <Card.Title>
-          <strong>{highestItem[0].bookTitle}</strong>
+        <Card.Title className='most-lucrative-title'>
+          {highestItem[0].bookTitle}
         </Card.Title>
         <Card.Subtitle>Most Lucrative</Card.Subtitle>
       </Card.Body>
