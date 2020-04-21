@@ -5,7 +5,7 @@ body
   font-family: Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  background-color: #fff
+  background-color: $bodyBackground
   color: $textColor
 
 .app-body
@@ -25,7 +25,7 @@ code
 
 // utility
 .scrolling
-  overflow: scroll
+  overflow: auto
 
 .cursor
   cursor: pointer
@@ -35,6 +35,11 @@ code
 
 .DateInput, .DateInput_input
   color: $textColor
+
+.master-card
+  background-color: $bodyComplimentary
+  height: $scrollingHeight
+  overflow: hidden
 
 // Bootstrap reset
 .card

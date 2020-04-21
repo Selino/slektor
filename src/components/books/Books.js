@@ -38,7 +38,7 @@ const Books = (props) => {
   useEffect(() => {}, [])
 
   return (
-    <Card className='books-list' style={{ backgroundColor: "#E5E5E5" }}>
+    <Card className='master-card'>
       <Card.Body>
         <Form id='book-search-form' onSubmit={handleSubmit}>
           <InputGroup className='mb-3'>
@@ -58,7 +58,9 @@ const Books = (props) => {
           </InputGroup>
           {error && <Alert variant='danger'>{error}</Alert>}
         </Form>
-        <BookList Books={books} />
+        <div style={{ height: "93%" }} className='scrolling'>
+          <BookList Books={books} />
+        </div>
       </Card.Body>
     </Card>
   )

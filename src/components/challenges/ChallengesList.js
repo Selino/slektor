@@ -9,7 +9,7 @@ import ChallengeTotalBids from "./ChallengeTotalBids"
 
 function ChallengesList(props) {
   return (
-    <Card style={{ backgroundColor: "#E5E5E5" }}>
+    <Card className='master-card '>
       <Card.Body>
         <ChallengeListFilters />
         <Card>
@@ -20,9 +20,11 @@ function ChallengesList(props) {
             </div>
           </Card.Header>
           <Card.Body>
-            {props.challenges.map((challenge) => {
-              return <ChallengeListItem key={challenge.id} {...challenge} />
-            })}
+            <div style={{ height: "100%" }} className='scrolling'>
+              {props.challenges.map((challenge) => {
+                return <ChallengeListItem key={challenge.id} {...challenge} />
+              })}
+            </div>
           </Card.Body>
         </Card>
       </Card.Body>
