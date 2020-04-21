@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the book search form 1`] = `
+<form
+  className="search-form"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "marginBottom": "1rem",
+    }
+  }
+>
+  <input
+    name="Search"
+    placeholder="Enter title"
+    style={
+      Object {
+        "width": "60%",
+      }
+    }
+    type="text"
+  />
+  <Button
+    active={false}
+    disabled={false}
+    size="sm"
+    type="Submit"
+    variant="primary"
+  >
+    Search
+  </Button>
+</form>
+`;

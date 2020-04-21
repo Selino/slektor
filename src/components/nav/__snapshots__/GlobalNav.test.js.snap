@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the global nav 1`] = `
+<Navbar
+  bg="dark"
+  className="GlobalNav"
+  collapseOnSelect={false}
+  expand={true}
+  fixed="top"
+  variant="dark"
+>
+  <NavbarBrand
+    href="#home"
+  >
+    <a
+      className="App-Logo-Link"
+      href="/"
+    >
+      <img
+        alt="Slektor App Logo"
+        className="d-inline-block App-logo"
+        src={null}
+      />
+      Slektor App
+    </a>
+  </NavbarBrand>
+  <NavbarCollapse
+    id="basic-navbar-nav"
+  >
+    <Nav
+      className="ml-auto"
+      fill={false}
+      justify={false}
+    >
+      <NavItem>
+        <withRouter(LinkContainer)
+          to="/booklist"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+          >
+            Books
+          </NavLink>
+        </withRouter(LinkContainer)>
+      </NavItem>
+      <NavItem>
+        <withRouter(LinkContainer)
+          to="/challenges"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+          >
+            Challenges
+          </NavLink>
+        </withRouter(LinkContainer)>
+      </NavItem>
+      <NavItem>
+        <withRouter(LinkContainer)
+          to="/create"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+          >
+            Create
+          </NavLink>
+        </withRouter(LinkContainer)>
+      </NavItem>
+      <NavItem>
+        <withRouter(LinkContainer)
+          to="/help"
+        >
+          <NavLink
+            as={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "displayName": "SafeAnchor",
+                "render": [Function],
+              }
+            }
+            disabled={false}
+          >
+            Help
+          </NavLink>
+        </withRouter(LinkContainer)>
+      </NavItem>
+    </Nav>
+  </NavbarCollapse>
+</Navbar>
+`;

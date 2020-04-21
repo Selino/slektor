@@ -1,0 +1,88 @@
+{
+  "name": "slektor-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@fortawesome/fontawesome-pro": "^5.13.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/pro-duotone-svg-icons": "^5.13.0",
+    "@fortawesome/pro-light-svg-icons": "^5.13.0",
+    "@fortawesome/pro-regular-svg-icons": "^5.13.0",
+    "@fortawesome/pro-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.4.1",
+    "dinero.js": "^1.7.0",
+    "env-cmd": "^10.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28",
+    "node-sass": "^4.13.1",
+    "raf": "^3.4.1",
+    "react": "^16.12.0",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "react-dates": "^21.8.0",
+    "react-dom": "^16.12.0",
+    "react-fontawesome": "^1.7.1",
+    "react-lorem-ipsum": "^1.4.4",
+    "react-moment": "^0.9.7",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.1.2",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "uuid": "^7.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:staging": "env-cmd -f .env.staging react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "identity-obj-proxy": "^3.0.0",
+    "react-test-renderer": "^16.13.1"
+  },
+  "jest": {
+    "verbose": true,
+    "setupFiles": [
+      "raf/polyfill",
+      "<rootDir>/src/tests/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(logo|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|sass)$": "identity-obj-proxy"
+    }
+  }
+}
