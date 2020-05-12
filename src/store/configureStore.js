@@ -1,8 +1,8 @@
+import thunk from "redux-thunk"
 import { createStore, combineReducers, applyMiddleware, compose } from "redux"
 import challengesReducer from "../reducers/ChallengesReducer"
 import booksReducer from "../reducers/BooksReducer"
 import filtersReducer from "../reducers/FiltersReducer"
-import thunk from "redux-thunk"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
