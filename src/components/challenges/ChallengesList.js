@@ -14,7 +14,7 @@ function ChallengesList(props) {
         <ChallengeListFilters />
         <Card>
           <Card.Header>
-            Featured
+            Challenges
             <div className='challenges-total'>
               Total (<ChallengeTotalBids Challenges={props.challenges} />)
             </div>
